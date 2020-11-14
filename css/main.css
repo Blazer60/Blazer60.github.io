@@ -5,7 +5,7 @@
  */
 
 :root {
-    --back: black;
+    --black: black;
     --white: whitesmoke;
 
     --primary-colour: #101010;
@@ -91,11 +91,24 @@ a.button {
     font-size: 18pt;
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
-    transition-duration: 200ms;
+    transition-duration: 400ms;
+}
+
+a.button.secondary {
+    background-color: var(--secondary-colour);
+}
+
+a.button.white {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+a.button.black {
+    background-color: var(--black);
 }
 
 a.button:hover {
-    background-color: var(--secondary-colour);
+    filter: invert(1);
 }
 
 /* end anchors */
