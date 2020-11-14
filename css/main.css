@@ -41,7 +41,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--primary-colour);
-    font-family: Calibri sans-serif;
+
 }
 
 body::-webkit-scrollbar-track {
@@ -55,3 +55,80 @@ body::-webkit-scrollbar-thumb {
 footer {
 
 }
+
+h1, h2, h3, h4, h5, p {
+    font-family: Calibri, sans-serif;
+    color: var(--white);
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+h2 {
+    font-size: 24pt;
+}
+
+h3 {
+    font-size: 18pt;
+}
+
+h1.secondary, h2.secondary, h3.secondary, h4.secondary, h5.secondary, p.secondary {
+    color: var(--tertiary-colour);
+}
+
+/* anchors */
+
+
+
+/* end anchors */
+
+/* Flexbox div elements */
+
+div {
+    display: flex;
+    flex: 1;
+    flex-basis: 0;
+}
+
+div.row {
+    flex-flow: row wrap;
+}
+
+div.column {
+    flex-flow: column wrap;
+}
+
+div.center {
+    justify-content: center;
+}
+
+div.right {
+    justify-content: flex-end;
+}
+
+div.middle {
+    align-content: center;
+}
+
+div.bottom {
+    align-content: flex-end;
+}
+
+/* End Flexbox div elements */
+
+/* Wrappers */
+
+div.text-wrapper {
+    flex-flow: column wrap;
+    flex-grow: 0;
+    max-width: 31rem;  /* ~500px */
+    width: fit-content;
+    padding: 0.5rem 1rem;
+}
+
+/* end wrappers */
