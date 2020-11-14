@@ -4,4 +4,54 @@
  * @author: Ryan Purse
  */
 
+:root {
+    --back: black;
+    --white: whitesmoke;
 
+    --primary-colour: #101010;
+    --secondary-colour: #0c0032;
+    --tertiary-colour: #4000ff;
+}
+
+/*
+ * Used to identify where elements are on the page
+ * Not to be used on live site
+ */
+.debug {
+    border: 1px solid darkred;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+
+body::-webkit-scrollbar {
+    width: auto;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-colour);
+    font-family: Calibri sans-serif;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--primary-colour);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--secondary-colour);
+}
+
+footer {
+
+}
