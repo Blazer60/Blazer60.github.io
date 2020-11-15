@@ -148,6 +148,11 @@ div.column {
     flex-flow: column wrap;
 }
 
+div.column.content {
+    max-width: 1440px;
+    flex-grow: 3;
+}
+
 div.center {
     justify-content: center;
 }
@@ -168,27 +173,19 @@ div.bottom {
 
 /* Wrappers */
 
-div.text-wrapper {
+div.wrapper {
     flex-flow: column wrap;
     flex-grow: 0;
-    max-width: 31rem;  /* ~500px */
     width: fit-content;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
 }
 
-div.button-wrapper {
-    flex-flow: column wrap;
-    flex-grow: 0;
-    text-decoration: none;
-    justify-content: center;
-    align-content: center;
-    color: var(--white);
-    background-color: var(--tertiary-colour);
-    font-weight: bold;
-    font-size: 18pt;
-    padding: 0.5rem 2rem;
-    border-radius: 0.5rem;
-    min-width: 5rem;
+div.wrapper.header {
+    max-width: 31rem;  /* ~500px */
+}
+
+div.wrapper.text {
+    max-width: 22rem;
 }
 
 /* end wrappers */
@@ -213,5 +210,8 @@ hr {
     }
     div.right {
         align-content: flex-end;
+    }
+    div.hide {
+        display: none;
     }
 }
