@@ -58,7 +58,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--tertiary-colour);
+    background: var(--secondary-colour);
     border-radius: 5px;
 }
 
@@ -113,8 +113,8 @@ a:hover {
 a.button {
     text-decoration: none;
     justify-content: center;
-    color: var(--black);
-    background-color: var(--tertiary-colour);
+    color: var(--white);
+    background-color: var(--secondary-colour);
     font-weight: bold;
     font-size: 18pt;
     padding: 0.5rem 2rem;
@@ -122,8 +122,8 @@ a.button {
     transition: filter 250ms ease-in-out;
 }
 
-a.button.secondary {
-    background-color: var(--secondary-colour);
+a.button.tertiary {
+    background-color: var(--tertiary-colour);
     color: var(--white);
 }
 
@@ -192,8 +192,8 @@ div.wrapper {
 }
 
 div.wrapper.heading {
-    max-width: 31rem;  /* ~500px */
-    min-width: 31rem;
+    max-width: 28rem;
+    min-width: 28rem;
 }
 
 div.wrapper.text {
@@ -204,8 +204,8 @@ div.wrapper.text {
 /* end wrappers */
 
 hr {
-    color: var(--tertiary-colour);
-    background-color: var(--tertiary-colour);
+    color: var(--secondary-colour);
+    background-color: var(--secondary-colour);
     width: 15rem;
     margin: 0;
     padding: 0;
