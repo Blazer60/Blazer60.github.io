@@ -9,8 +9,11 @@
     --white: whitesmoke;
 
     --primary-colour: #101010;
-    --secondary-colour: #0c0032;
-    --tertiary-colour: #4000ff;
+    --secondary-colour: #4000ff;
+    --tertiary-colour: #B6FB00;
+
+    /* Dark Purple: 0c0032 */
+    /* #B6FB00 */
 
     --resolution-min: 640px;
 }
@@ -85,7 +88,11 @@ h3 {
 }
 
 h1.secondary, h2.secondary, h3.secondary, h4.secondary, h5.secondary, p.secondary {
-    color: var(--tertiary-colour);
+    color: var(--secondary-colour);
+}
+
+h1.black, h2.black, h3.black, h4.black, p.black, a.black {
+    color: var(--black);
 }
 
 /* anchors */
@@ -106,7 +113,7 @@ a:hover {
 a.button {
     text-decoration: none;
     justify-content: center;
-    color: var(--white);
+    color: var(--black);
     background-color: var(--tertiary-colour);
     font-weight: bold;
     font-size: 18pt;
@@ -117,6 +124,7 @@ a.button {
 
 a.button.secondary {
     background-color: var(--secondary-colour);
+    color: var(--white);
 }
 
 a.button.white {
@@ -126,6 +134,7 @@ a.button.white {
 
 a.button.black {
     background-color: var(--black);
+    color: var(--white);
 }
 
 a.button:hover {
