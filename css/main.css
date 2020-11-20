@@ -145,51 +145,42 @@ a.button:hover {
 
 /* Navigation */
 
-.navbar {
+ul {
     display: flex;
-    flex: 0;
-    flex-flow: row nowrap;
-    transition: background-color 200ms ease;
-    height: inherit;
-    max-height: 100%;
-}
-
-.navbar:hover {
-    background-color: var(--secondary-colour);
-}
-
-.navbar-nav {
-    display: flex;
-    flex-flow: row nowrap;
     list-style: none;
     margin: 0;
-    padding: 0;
-    height: inherit;
+    padding-left: 0;
 }
 
-.navbar-nav:first-child {
-    margin-left: 2rem;
-}
-
-.nav-item {
-    display: flex;
-    flex-flow: row nowrap;
-    color: var(--white);
-    margin: 0;
-    padding: 0;
-}
-
-.expandable {
-    visibility: hidden;
-    top: -100%;
+li {
+    display: block;
+    transition-duration: 500ms;
     position: relative;
-    transition: top 400ms ease, visibility 0ms ;
 }
 
-/* Any child of a when x happens, apply the css below to child */
-.drop-down:hover .expandable{
-    top: 0;
+li:hover {
+    cursor: pointer;
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 500ms ease;
+    margin-top: 0;
+    left: 0;
+    display: none;
+}
+
+ul li:hover > ul, ul li ul:hover {
     visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
 }
 
 /* fix nav so it scales correctly on any screen */
@@ -278,8 +269,5 @@ hr {
     }
     div.can-hide {
         display: none;
-    }
-    .drop-down {
-        flex-flow: column nowrap;
     }
 }
