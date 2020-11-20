@@ -33,8 +33,6 @@ html {
 header {
     position: fixed;
     width: 100vw;
-    min-height: 3rem;
-    height: 5rem;
     z-index: 100;
 }
 
@@ -103,7 +101,7 @@ a {
     text-decoration: none;
     font-size: 18pt;
     font-weight: bold;
-    margin: 0 0.1rem;
+    margin: 1rem 0.1rem;
     padding: 0 0.5rem;
     transition: color 200ms ease-in-out;
 }
@@ -148,21 +146,29 @@ a.button:hover {
 /* Navigation */
 
 .navbar {
+    display: flex;
+    flex: 0;
+    flex-flow: row nowrap;
     transition: background-color 200ms ease;
     height: inherit;
+    max-height: 100%;
 }
 
 .navbar:hover {
-    background-color: var(--primary-colour);
+    background-color: var(--secondary-colour);
 }
 
 .navbar-nav {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     list-style: none;
     margin: 0;
     padding: 0;
     height: inherit;
+}
+
+.navbar-nav:first-child {
+    margin-left: 2rem;
 }
 
 .nav-item {
@@ -174,15 +180,19 @@ a.button:hover {
 }
 
 .expandable {
-    position: relative;
+    visibility: hidden;
     top: -100%;
-    transition: top 400ms ease;
+    position: relative;
+    transition: top 400ms ease, visibility 0ms ;
 }
 
 /* Any child of a when x happens, apply the css below to child */
-.navbar:hover .expandable{
+.drop-down:hover .expandable{
     top: 0;
+    visibility: visible;
 }
+
+/* fix nav so it scales correctly on any screen */
 
 
 /* Flexbox div elements */
@@ -268,5 +278,8 @@ hr {
     }
     div.can-hide {
         display: none;
+    }
+    .drop-down {
+        flex-flow: column nowrap;
     }
 }
