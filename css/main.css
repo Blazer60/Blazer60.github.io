@@ -147,7 +147,6 @@ a.button:hover {
 
 ul {
     display: flex;
-    list-style: none;
     margin: 0;
     padding-left: 0;
 }
@@ -169,13 +168,15 @@ ul li ul {
     transition: all 500ms ease;
     margin-top: 0;
     left: 0;
+    min-width: max-content;
     display: none;
 }
 
 ul li:hover > ul, ul li ul:hover {
     visibility: visible;
     opacity: 1;
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 ul li ul li {
