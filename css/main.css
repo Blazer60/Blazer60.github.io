@@ -145,29 +145,25 @@ a.button:hover {
 
 /* Navigation */
 
-ul {
+.navbar, .dropdown, .menu {
     display: flex;
     margin: 0;
     padding-left: 0;
     transition: background-color 500ms ease-in-out;
 }
 
-ul:hover {
+.navbar:hover, .dropdown:hover, .menu:hover {
     background-color: var(--primary-colour);
 }
 
-li {
+.navbar li, .dropdown li, .menu li {
     display: block;
-    /* transition-duration: 500ms; */
     position: relative;
+    cursor: pointer;
 }
 
 .navbar:first-child {
     margin-left: 1rem;
-}
-
-li:hover {
-    cursor: pointer;
 }
 
 .dropdown {
@@ -178,13 +174,19 @@ li:hover {
     min-width: max-content;
     display: flex;
     flex-flow: column nowrap;
-    transition: top 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
     /* Adjust relative to it's parent. Header has a value of 100 */
     z-index: -1;
 }
 
-ul li:hover > ul, .dropdown:hover {
+/*
+ * Target class dropdown who's parent is hovering or dropdown hover
+ * First bit required to initiate the dropdown. second bit is to stop it going back
+ * up when hovering over items
+ */
+.navbar li:hover > .dropdown, .dropdown:hover {
     top: 100%;
+    background-color: var(--primary-colour);
 }
 
 /* fix nav so it scales correctly on any screen */
@@ -261,7 +263,36 @@ hr {
     border-radius: 1px;
 }
 
+@media only screen and (min-width: 960px){
+    /* Navigation */
+    .hide-on-desktop {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 960px) {
+    /* Navigation */
+    ul {
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
+    .dropdown {
+        top: -600%;
+    }
+
+    .navbar {
+        position: absolute;
+        left: -100%;
+        transition: all 500ms ease-in-out;
+    }
+
+    .menu li:hover > .navbar, .navbar:hover {
+        left: 0;
+        background-color: var(--primary-colour);
+    }
+
+    /* Div elements */
     div.row {
         flex-flow: column nowrap;
     }
