@@ -149,39 +149,42 @@ ul {
     display: flex;
     margin: 0;
     padding-left: 0;
+    transition: background-color 500ms ease-in-out;
+}
+
+ul:hover {
+    background-color: var(--primary-colour);
 }
 
 li {
     display: block;
-    transition-duration: 500ms;
+    /* transition-duration: 500ms; */
     position: relative;
+}
+
+.navbar:first-child {
+    margin-left: 1rem;
 }
 
 li:hover {
     cursor: pointer;
 }
 
-ul li ul {
-    visibility: hidden;
-    opacity: 0;
+.dropdown {
     position: absolute;
-    transition: all 500ms ease;
     margin-top: 0;
     left: 0;
+    top: -300%;
     min-width: max-content;
-    display: none;
-}
-
-ul li:hover > ul, ul li ul:hover {
-    visibility: visible;
-    opacity: 1;
     display: flex;
     flex-flow: column nowrap;
+    transition: top 500ms ease-in-out;
+    /* Adjust relative to it's parent. Header has a value of 100 */
+    z-index: -1;
 }
 
-ul li ul li {
-    clear: both;
-    width: 100%;
+ul li:hover > ul, .dropdown:hover {
+    top: 100%;
 }
 
 /* fix nav so it scales correctly on any screen */
