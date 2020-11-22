@@ -263,6 +263,16 @@ hr {
     border-radius: 1px;
 }
 
+/* menu icon */
+svg.menu-icon {
+    fill: var(--white);
+    transition: fill 200ms ease-in-out;
+}
+
+svg.menu-icon:hover {
+    fill: var(--tertiary-colour);
+}
+
 @media only screen and (min-width: 960px){
     /* Navigation */
     .hide-on-desktop {
@@ -274,11 +284,11 @@ hr {
     /* Navigation */
     ul {
         flex-flow: column nowrap;
-        width: 100%;
+        width: 100vw;
     }
 
     .dropdown {
-        top: -600%;
+        top: -610%;
     }
 
     .navbar {
