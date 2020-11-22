@@ -273,6 +273,12 @@ svg.menu-icon:hover {
     fill: var(--tertiary-colour);
 }
 
+/* Model viewer */
+model-viewer {
+    --poster-color: var(--primary-colour);
+    --progress-mask: var(--primary-colour);
+}
+
 @media only screen and (min-width: 960px){
     /* Navigation */
     .hide-on-desktop {
