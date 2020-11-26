@@ -49,15 +49,16 @@ body {
     min-width: var(--resolution-min);
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 10px;
+
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: var(--black);
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background: var(--secondary-colour);
     border-radius: 5px;
 }
