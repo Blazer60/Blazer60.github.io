@@ -1,0 +1,26 @@
+/*
+ * Gallery css used for gallery.html
+ * Created On: 26/11/2020
+ * @author: Ryan Purse
+ */
+
+/* Gallery */
+
+img.gallery {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1rem 0;
+}
+
+/* Side bar */
+
+img.side-bar-image {
+    max-width: 50%;
+    max-height: 50%;
+    filter: opacity(60%);
+    transition: filter 200ms ease-in-out;
+}
+
+img.side-bar-image:hover {
+    filter: opacity(100%);
+}
