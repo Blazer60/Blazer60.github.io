@@ -13,7 +13,7 @@ const infoElement = document.getElementById("info");
 const sideBar = document.getElementById("side-bar");
 let images = [];
 
-const urls = [
+const sourceImages = [
     "../img/gallery/aggressor.jpg",
     "../img/gallery/Belakor.jpg",
     "../img/gallery/Belakor.jpg",
@@ -36,20 +36,22 @@ const urls = [
     "../img/gallery/vostroyanMortarTeam.jpg",
 ]
 
+function setMain(id) {
+    if (id < sourceImages.length) { imageElement.src = sourceImages[id]; }
+}
+
 function createImage(src, id) {
     let img = document.createElement("img");
     img.src = src;
     img.className = "side-bar-image";
     img.addEventListener("click", function () {
-        imageElement.src = src;
-        titleElement.innerText = id;
-        infoElement.innerText = "hello.";
+        setMain(id);
     });
     sideBar.appendChild(img);
 }
 
 window.onload = function () {
-    for (let i = 0; i < urls.length; i++) {
-        createImage(urls[i], i);
+    for (let i = 0; i < sourceImages.length; i++) {
+        createImage(sourceImages[i], i);
     }
 }
