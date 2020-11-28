@@ -16,7 +16,6 @@ let images = [];
 const sourceImages = [
     "../img/gallery/aggressor.jpg",
     "../img/gallery/Belakor.jpg",
-    "../img/gallery/Belakor.jpg",
     "../img/gallery/belakorBack.jpg",
     "../img/gallery/bloodletters.jpg",
     "../img/gallery/corvusBlackstar.jpg",
@@ -36,13 +35,42 @@ const sourceImages = [
     "../img/gallery/vostroyanMortarTeam.jpg",
 ]
 
+const titles = [
+    "Deathwatch Aggressor",
+    "Be'lakor, the first Daemon Prince",
+    "Be'lakor, the first Daemon Prince",
+    "Khorne Bloodletter",
+    "Corvus Blackstar",
+    "Eldar Falcon",
+    "Eldar Falcon",
+    "Eldar Falcon",
+    "Eldar Falcon",
+    "Eldar Rangers",
+    "Eldar Rangers",
+    "Eldar Squad",
+    "Khorne Flesh Hounds",
+    "Khorne Daemon Prince",
+    "Khorne Daemon Prince",
+    "Deathwatch Reiver Squad",
+    "Imperial Guard: Vostroyan Guard Squad",
+    "Imperial Guard: Medic",
+    "Imperial Guard: Heavy Mortar Team",
+]
+
 function setMain(id) {
-    if (id < sourceImages.length) { imageElement.src = sourceImages[id]; }
+    if (id < sourceImages.length) {
+        imageElement.src = sourceImages[id];
+        imageElement.alt = titles[id];
+    }
+    if (id < titles.length) {
+        titleElement.innerText = titles[id];
+    }
 }
 
 function createImage(src, id) {
     let img = document.createElement("img");
     img.src = src;
+    if (id < titles.length) {img.alt = titles[id];}
     img.className = "side-bar-image";
     img.addEventListener("click", function () {
         setMain(id);
