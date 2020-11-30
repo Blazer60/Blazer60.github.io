@@ -13,11 +13,18 @@ img.gallery {
 
 /* Side bar */
 
+div.side-bar {
+    display: grid;
+    flex: 0;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
 img.side-bar-image {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 100%;
     filter: opacity(60%);
     transition: filter 200ms ease-in-out;
+    min-width: 50px;
+    min-height: 50px;
 }
 
 img.side-bar-image:hover {
