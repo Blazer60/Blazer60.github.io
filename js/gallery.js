@@ -41,10 +41,10 @@ const titles = [
     "Be'lakor, the first Daemon Prince",
     "Khorne Bloodletter",
     "Corvus Blackstar",
-    "Eldar Falcon",
-    "Eldar Falcon",
-    "Eldar Falcon",
-    "Eldar Falcon",
+    "Eldar Wave Serpent",
+    "Eldar Wave Serpent",
+    "Eldar Wave Serpent",
+    "Eldar Wave Serpent",
     "Eldar Rangers",
     "Eldar Rangers",
     "Eldar Squad",
@@ -57,6 +57,28 @@ const titles = [
     "Imperial Guard: Heavy Mortar Team",
 ]
 
+const infos = [
+    "One of my favourite models in the Deathwatch Arsenal. With two machine guns on it’s wrists, no one wanted to come close to this unit.",
+    "I decided to experiment with the fades using an airbrush. I’m happy with the outcome however the colours don’t match up to the law of the Warhammer universe. That being said, the purple really makes it stand out in front of the sea of red Bloodletters.",
+    "I decided to experiment with the fades using an airbrush. I’m happy with the outcome however the colours don’t match up to the law of the Warhammer universe. That being said, the purple really makes it stand out in front of the sea of red Bloodletters.",
+    "How fast can I batch paint 20 of these beasts? Well… not very fast. But using some simple tricks, these guys look like they have had way more time put into them than they actually have.",
+    "Deathwatch’s choice of transport to get units from planet to planet. Their pinpoint accuracy is unmatched compared to anything in its caliber. Everytime I look at this model, I always forget that it’s only made of plastic.",
+    "A really nice paint scheme that brings cohesion to my Aldari army.",
+    "A really nice paint scheme that brings cohesion to my Aldari army.",
+    "A really nice paint scheme that brings cohesion to my Aldari army.",
+    "A really nice paint scheme that brings cohesion to my Aldari army.",
+    "Some of my most recent models to paint. With the new 9th edition rules, I had to adjust my army slightly. With their sniper rifles, they can pick off any commander on the board with ease.",
+    "Some of my most recent models to paint. With the new 9th edition rules, I had to adjust my army slightly. With their sniper rifles, they can pick off any commander on the board with ease.",
+    "Some units from my Eldar Army all in one picture. Here we have: Wave Serpent, Windriders, Rangers, Wraithguards, and Farseer",
+    "The dogs of the underworld. They’re used to outflank the enemy and deny any physic powers casted from the enemy team.",
+    "Covered in the skulls of his enemies, this Daemon takes no prisoners. This Forgeworld model took me the most amount of time compared to any other model that I’ve painted.",
+    "Covered in the skulls of his enemies, this Daemon takes no prisoners. This Forgeworld model took me the most amount of time compared to any other model that I’ve painted.",
+    "Reiver squads drop in from the sky and bring fear to the battlefield. As Deathwatch is a mixture of all space marine chapters, each right shoulder pad symbolises where the respected model originated from.",
+    "Make Ready...! Fire! This is an interpretation of what napoleonic units would look like in the year 40,000.",
+    "A close up of the medic for the squad. Hopefully none of them are afraid of syringes.",
+    "Two Vostroyan Guards manning a mortar.",
+]
+
 function setMain(id) {
     if (id < sourceImages.length) {
         imageElement.src = sourceImages[id];
@@ -64,6 +86,10 @@ function setMain(id) {
     }
     if (id < titles.length) {
         titleElement.innerText = titles[id];
+    }
+
+    if (id < infos.length) {
+        infoElement.innerText = infos[id];
     }
 }
 
