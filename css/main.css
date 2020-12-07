@@ -243,6 +243,8 @@ div.wrapper {
     flex-flow: column wrap;
     flex-grow: 0;
     width: fit-content;
+    width: -moz-fit-content;    /* Firefox/Gecko */
+    /* width: fit-content; */
     padding: 0 3rem;
 }
 
