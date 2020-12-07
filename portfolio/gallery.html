@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+</head>
+<body>
+<!-- default style: main.css -->
+<header>
+    <nav role="navigation">
+        <ul class="menu">
+            <li>
+                <a class="hide-on-desktop">
+                    <!-- Hamburger Icon -->
+                    <svg class="menu-icon" viewBox="0 0 100 80" width="2rem" height="2rem">
+                        <rect y="0" width="100" height="20" rx="8"></rect>
+                        <rect y="30" width="100" height="20" rx="8"></rect>
+                        <rect y="60" width="100" height="20" rx="8"></rect>
+                    </svg>
+                </a>
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Projects</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Project Alpha</a></li>
+                            <li><a href="#">Project Beta</a></li>
+                            <li><a href="#">Project Lambda - Long Name</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="column" style="min-height: 3rem">
+
+</div>    <!-- Gallery Section -->
+    <div class="row">
+        <div id="side-bar" class="side-bar" style="max-height: calc(100vh - 3rem)">
+
+        </div>
+
+        <div class="column" style="flex-grow: 3;">
+            <div class="row" style="flex-grow: 0;">
+                <div class="heading wrapper">
+                    <h1 id="title">Gallery</h1>
+                </div>
+            </div>
+            <div class="middle center row">
+                <div id="image" class="gallery" style="flex-grow: 1">
+
+                </div>
+            </div>
+            <div class="center row" style="flex-grow: 0">
+                <div class="text wrapper">
+                    <p id="info">Select an image to viw more info.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- default style: main.css -->
+<footer>
+    <div class="right row">
+        <h3>Template Footer</h3>
+    </div>
+</footer>    <script src="../js/gallery.js"></script>
+</body>
+</html>
+
+<!--
+<div class="row" style="min-height: 100vh">
+
+        <div class="column" style="flex-grow: 0.5">
+            <div class="center row" style="flex-grow: 0">
+                <h1>Gallery</h1>
+            </div>
+            <div id="side-bar" class="side-bar" style="overflow: auto; min-height: 0;">
+
+            </div>
+        </div>
+        <div class="column">
+            <div class="column" style="flex-grow: 0">
+                <div class="heading wrapper">
+                    <h2 id="title">Deathwatch Aggressor</h2>
+                </div>
+            </div>
+            <div class="center middle column">
+                <img id="image" class="gallery" src="../img/gallery/aggressor.jpg" alt="Aggressor">
+            </div>
+            <div class="center row" style="flex-grow: 0">
+                <div class="text wrapper">
+                    <p id="info">One of my favourite models in the Deathwatch Arsenal. With two machine guns on it’s wrists, no one wanted to come close to this unit.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+-->

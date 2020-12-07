@@ -5,102 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 <body>
 <!-- default style: main.css -->
 <header>
-    <div class="middle right row no-collapse" style="min-height: 3rem; margin-right: 5vw">
-        <a>Home</a>
-        <a>Projects</a>
-        <a>About</a>
-    </div>
+    <nav role="navigation">
+        <ul class="menu">
+            <li>
+                <a class="hide-on-desktop">
+                    <!-- Hamburger Icon -->
+                    <svg class="menu-icon" viewBox="0 0 100 80" width="2rem" height="2rem">
+                        <rect y="0" width="100" height="20" rx="8"></rect>
+                        <rect y="30" width="100" height="20" rx="8"></rect>
+                        <rect y="60" width="100" height="20" rx="8"></rect>
+                    </svg>
+                </a>
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Projects</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Project Alpha</a></li>
+                            <li><a href="#">Project Beta</a></li>
+                            <li><a href="#">Project Lambda - Long Name</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </header>
 <div class="column" style="min-height: 3rem">
 
 </div>
-<svg id="fader"></svg>
-<script src="../js/master.js"></script>
     <!-- Landing Page banner -->
-    <div class="row">
-        <div class="column can-hide"></div>
-        <div class="content column" style="min-height: 100vh">
-            <div class="column"></div>
-            <div class="column" style="flex-grow: 4">
-                <div class="heading wrapper" style="max-width: 25rem; min-width: 25rem">
-                    <h1>Ryan Purse</h1>
-                    <hr>
-                    <h2>Games Software Engineering Student</h2>
-                </div>
+    <div class="row" style="min-height: 100vh">
+        <div class="column">
+            <div class="heading wrapper" style="margin-top: 15%; margin-left: 15%">
+                <h1>Ryan Purse</h1>
+                <hr>
+                <h2>Games Software Engineering Student</h2>
             </div>
-
         </div>
-        <div class="column can-hide"></div>
+        <div class="center column">
+        </div>
     </div>
 
     <!-- Projects Overview -->
-    <div class="row">
-        <div class="column can-hide"></div>
-        <div class="column content">
-            <!-- Heading -->
-            <div class="heading wrapper">
-                <h1>Projects</h1>
-                <hr>
-            </div>
-
-            <!-- MLA A-Level Project -->
-            <div class="row" style="margin-top: 10rem">
-                <div class="center column">
-
-                    <div class="heading wrapper">
-                        <h2>Machine Learning Algorithm</h2>
-                    </div>
-                    <div class="wrapper">
-                        <div class="text wrapper">
-                            <p>My NEA A Level project. Using a Feed Forward Neural Network, the cars must navigate round the track with hitting the wall in the fastest time possible.</p>
-                        </div>
-                        <div class="middle column">
-                            <div class="wrapper">
-                                <a class="button">View more</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="center column">
-                    <img src="../img/projects/aLevel/hairPinDemoTrack.png" alt="hair-pin demo track" style="max-width: 500px">
-                </div>
-            </div>
-
-            <!-- Dorset Water Centre -->
-            <div class="row" style="flex-direction: row-reverse; margin-top: 10rem">
-                <div class="center column">
-
-                    <div class="heading wrapper">
-                        <h2>Dorset Water Centre</h2>
-                    </div>
-                    <div class="wrapper">
-                        <div class="text wrapper">
-                            <p>A website that sells Water Softeners, Water Filters Systems and various other water related items to the whole of Dorset and parts of neighboring counties.</p>
-                        </div>
-                        <div class="middle column">
-                            <div class="wrapper">
-                                <a class="button" href="dorsetwatercentre.html">View more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="column">
-                    <div class="center column">
-                        <img src="../img/projects/DWC/dwcQuooker.png" alt="Quooker landing page" style="max-width: 500px">
-                    </div>
-                </div>
-            </div>
-
-
+    <div class="column">
+        <div class="heading wrapper" style="margin-left: 15%; min-height: 20vh">
+            <h1>Projects</h1>
+            <hr>
         </div>
-        <div class="column can-hide"></div>
+    </div>
+
+
+    <!-- Dorset Water Centre -->
+    <div class="row" id="dwc" style="min-height: 60vh">
+        <div class="column" style="margin-left: 15%; margin-top: 1%">
+            <div class="wrapper">
+                <div class="heading wrapper">
+                    <h2>Dorset Water Centre</h2>
+                    <hr>
+                </div>
+                <div class="text wrapper">
+                    <p>A website that sells Water Softeners, Water Filters Systems and various other water related items to the whole of Dorset and parts of neighboring counties.</p>
+                </div>
+                <div class="wrapper">
+                    <a class="button">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- A Level Project -->
+    <div class="row" id="a-level" style="min-height: 60vh">
+        <div class="column" style="margin-left: 15%; margin-top: 1%">
+            <div class="wrapper">
+                <div class="heading wrapper">
+                    <h2>Machine Learning Algorithm</h2>
+                    <hr>
+                </div>
+                <div class="text wrapper">
+                    <p>My NEA A Level project. Using a Feed Forward Neural Network, the cars must navigate round the track without hitting the wall in the fastest time possible.</p>
+                </div>
+                <div class="wrapper">
+                    <a class="button">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Website -->
+    <div class="row" id="portfolio" style="min-height: 60vh">
+        <div class="column" style="margin-left: 15%; margin-top: 1%">
+            <div class="wrapper">
+                <div class="heading wrapper">
+                    <h2>Portfolio Site</h2>
+                    <hr>
+                </div>
+                <div class="text wrapper">
+                    <p>My site is built using HTML, CSS and JavaScript with the goal to make it work on any device.</p>
+                </div>
+                <div class="wrapper">
+                    <a class="button">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GDP A2 Card Game -->
+    <div class="row" id="card-game" style="min-height: 60vh; position: relative">
+        <div class="column" style="margin-left: 15%; margin-top: 1%">
+            <div class="wrapper">
+                <div class="heading wrapper">
+                    <h2>GDP A2 Group Project</h2>
+                    <hr>
+                </div>
+                <div class="text wrapper">
+                    <p>Our first group project at Bournemouth University. Our task was to create a board game that can be played in under 30 minutes. We decided to go with a Magic the Gathering / Hearthstone genre that has a dark fantasy theme.</p>
+                </div>
+                <div class="wrapper">
+                    <a class="button">View More</a>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; bottom: 0; right: 1rem">
+            <p>Artwork by<a class="inline" href="https://www.instagram.com/ryan.bolson/" target="_blank">Ryan Bolson</a></p>
+        </div>
     </div>
 
     <div class="column" style="min-height: 20vh"></div>
