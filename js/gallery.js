@@ -81,8 +81,7 @@ const infos = [
 
 function setMain(id) {
     if (id < sourceImages.length && imageElement !== null) {
-        imageElement.src = sourceImages[id];
-        imageElement.alt = titles[id];
+        imageElement.style.backgroundImage = "url(" + sourceImages[id] + ")";
     }
     if (id < titles.length && titleElement !== null) {
         titleElement.innerText = titles[id];
