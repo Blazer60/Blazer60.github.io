@@ -25,19 +25,25 @@
     </div>
 
     <!-- The Cars -->
-    <div class="column">
-        <div class="heading wrapper">
-            <h2>The Cars</h2>
-            <hr>
+    <div class="row">
+        <div class="center bottom column">
+            <div class="heading wrapper">
+                <h2>The Cars</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>Each car is made with a box that represents the car and five raycasts that act as the vision of a “driver”. The box of the car is then placed within an axis aligned bounding box to increase the efficiency of collision checks. Cars can have three colours: black, green and red. black cars are active, green are the best from the previous generation and red cars are inactive or “dead”.</p>
+            </div>
         </div>
-        <div class="text wrapper">
-            <p>Each car is made with a box that represents the car and five raycasts that act as the vision of a “driver”. The box of the car is then placed within an axis aligned bounding box to increase the efficiency of collision checks. Cars can have three colours: black, green and red. black cars are active, green are the best from the previous generation and red cars are inactive or “dead”.</p>
+        <div class="column">
+
         </div>
     </div>
 
+
     <!-- The Track -->
-    <div class="row" style="padding: 0 15%">
-        <div class="center column">
+    <div class="row">
+        <div class="center bottom column">
             <div class="heading wrapper">
                 <h2>The Track</h2>
                 <hr>
@@ -55,7 +61,7 @@
 
     <!-- The Architecture/Neural Network -->
     <div class="row">
-        <div class="center column">
+        <div class="center bottom column">
             <div class="heading wrapper">
                 <h2>The Architecture</h2>
                 <hr>
@@ -64,10 +70,11 @@
                 <p>The cars use a Deep Feedforward Neural Network. Each input neuron is a distance value from a raycast. That value is then normalised. It is then passed through three hidden layers. Finally, it passed to the output layer. One node controls the speed of the car and the other determines the steering angle.</p>
             </div>
         </div>
-        <div class="center middle column">
+        <div class="column">
             <img src="../img/projects/aLevel/DeepFeedforwardNeuralNetwork.png" alt="Neural Network Architecture" style="width: 100%">
         </div>
     </div>
+
 
 
     <!-- Draw backs -->
