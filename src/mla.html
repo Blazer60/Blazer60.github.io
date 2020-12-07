@@ -11,28 +11,44 @@
     <header></header>
 
     <!-- Landing page image with a small amount of info -->
-    <div id="a-level" class="column" style="min-height: 60vh">
+    <div id="a-level" class="row" style="min-height: 60vh">
         <div class="column" style="margin-left: 15%; margin-top: 1%">
             <div class="heading wrapper">
                 <h1>Machine Learning Algorithm</h1>
                 <hr>
                 <h3>My A-Level Project</h3>
+                <div class="wrapper" style="padding: 0">
+                    <img src="../img/logos/pythonLogo.png" alt="Python Logo">
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- How I did it -->
+    <!-- The Cars -->
     <div class="column">
         <div class="heading wrapper">
             <h2>The Cars</h2>
             <hr>
         </div>
         <div class="text wrapper">
-            <p>This would then be followed by some information about the cars but I don't want to write all of that right away</p>
+            <p>Each car is made with a box that represents the car and five raycasts that act as the vision of a “driver”. The box of the car is then placed within an axis aligned bounding box to increase the efficiency of collision checks. Cars can have three colours: black, green and red. black cars are active, green are the best from the previous generation and red cars are inactive or “dead”.</p>
         </div>
     </div>
+
+    <!-- The Track -->
+    <div class="column">
+        <div class="heading wrapper">
+            <h2>The Track</h2>
+            <hr>
+        </div>
+        <div class="text wrapper">
+            <p>Tracks are made up of lots of straight lines. Each line has an axis aligned bounding box surrounding it. Then each line is paired another line nearby and another box surrounds the two. This is repeated until there is a large box that contains the entire track. This makes it extremely fast for a car to check if it is colliding with the track as it can traverse down the binary tree only checking the boxes that the car is in.</p>
+        </div>
+    </div>
+
+    <!-- The Architecture/Neural Network -->
     <div class="row">
-        <div class="column">
+        <div class="center column">
             <div class="heading wrapper">
                 <h2>The Architecture</h2>
                 <hr>
