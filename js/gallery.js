@@ -80,15 +80,15 @@ const infos = [
 ]
 
 function setMain(id) {
-    if (id < sourceImages.length) {
+    if (id < sourceImages.length && imageElement !== null) {
         imageElement.src = sourceImages[id];
         imageElement.alt = titles[id];
     }
-    if (id < titles.length) {
+    if (id < titles.length && titleElement !== null) {
         titleElement.innerText = titles[id];
     }
 
-    if (id < infos.length) {
+    if (id < infos.length && infoElement !== null) {
         infoElement.innerText = infos[id];
     }
 }

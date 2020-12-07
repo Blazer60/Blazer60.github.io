@@ -6,9 +6,16 @@
 
 /* Gallery */
 
-img.gallery {
-    max-width: 90%;
-    max-height: 90%;
+div.gallery {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 800px;
+    background-image: url("../img/gallery/Belakor.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 /* Side bar */
@@ -17,9 +24,11 @@ div.side-bar {
     display: grid;
     flex: 1;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    overflow-y: auto;
 }
 
 img.side-bar-image {
+    display: grid;
     max-width: 100%;
     filter: opacity(60%);
     transition: filter 200ms ease-in-out;
