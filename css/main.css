@@ -344,4 +344,7 @@ model-viewer {
     div.can-hide {
         display: none;
     }
+    div.bottom {
+        align-content: flex-start;
+    }
 }
