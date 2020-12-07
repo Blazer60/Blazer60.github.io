@@ -8,7 +8,7 @@ import os
 
 header = "header.html"                                      # Directory to the header file
 footer = "footer.html"                                      # Directory to the footer file
-black_list = [header, footer, "portfolioColours.html", "navigationMenu.html", "model.html"]      # Removes files that do not need a header of footer
+black_list = [header, footer, "portfolioColours.html", "navigationMenu.html", "model.html", "footerBar.html"]      # Removes files that do not need a header of footer
 src_directory = "src/"                                      # Src page location
 bld_directory = "portfolio/"                                # build directory location
 
