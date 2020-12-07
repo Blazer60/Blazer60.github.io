@@ -24,11 +24,10 @@ div.side-bar {
     display: grid;
     flex: 1;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    overflow-y: auto;
+    overflow: auto;
 }
 
 img.side-bar-image {
-    display: grid;
     max-width: 100%;
     filter: opacity(60%);
     transition: filter 200ms ease-in-out;
@@ -36,4 +35,15 @@ img.side-bar-image {
 
 img.side-bar-image:hover {
     filter: opacity(100%);
+}
+
+@media only screen and (max-width: 960px) {
+    div.side-bar {
+        grid-template-columns: repeat(100, 200px);
+        max-height: 200px;
+    }
+    div.gallery {
+        min-width: 100vw;
+        min-height: 100vw;
+    }
 }
