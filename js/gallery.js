@@ -35,6 +35,28 @@ const sourceImages = [
     "../img/gallery/vostroyanMortarTeam.jpg",
 ]
 
+const thumbnails = [
+    "../img/gallery/thumbnails/aggressor.jpg",
+    "../img/gallery/thumbnails/Belakor.jpg",
+    "../img/gallery/thumbnails/belakorBack.jpg",
+    "../img/gallery/thumbnails/bloodletters.jpg",
+    "../img/gallery/thumbnails/corvusBlackstar.jpg",
+    "../img/gallery/thumbnails/eldarFalcon.jpg",
+    "../img/gallery/thumbnails/eldarFalconBack.jpg",
+    "../img/gallery/thumbnails/eldarFalconCockpit.jpg",
+    "../img/gallery/thumbnails/eldarFalconSideEngine.jpg",
+    "../img/gallery/thumbnails/eldarRanger.jpg",
+    "../img/gallery/thumbnails/eldarRangerBack.jpg",
+    "../img/gallery/thumbnails/eldarSquad.jpg",
+    "../img/gallery/thumbnails/fleshHounds.jpg",
+    "../img/gallery/thumbnails/khorneDeamonPrince.jpg",
+    "../img/gallery/thumbnails/khorneDeamonPrinceBack.jpg",
+    "../img/gallery/thumbnails/reiverSquad.jpg",
+    "../img/gallery/thumbnails/vostroyanGuardSquad.jpg",
+    "../img/gallery/thumbnails/vostroyanMedic.jpg",
+    "../img/gallery/thumbnails/vostroyanMortarTeam.jpg",
+]
+
 const titles = [
     "Deathwatch Aggressor",
     "Be'lakor, the first Daemon Prince",
@@ -105,6 +127,6 @@ function createImage(src, id) {
 
 window.onload = function () {
     for (let i = 0; i < sourceImages.length; i++) {
-        createImage(sourceImages[i], i);
+        createImage(thumbnails[i], i);
     }
 }
