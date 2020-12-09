@@ -45,8 +45,9 @@ body {
     flex-flow: column nowrap;
     margin: 0;
     padding: 0;
+    width: 100%;
     background-color: var(--primary-colour);
-    min-width: var(--resolution-min);
+    /* min-width: var(--resolution-min); */
 }
 
 *::-webkit-scrollbar {
@@ -348,5 +349,9 @@ model-viewer {
     }
     div.bottom {
         align-content: flex-start;
+    }
+
+    div.wrapper.heading, div.wrapper.text {
+        min-width: 0;
     }
 }
