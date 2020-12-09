@@ -351,10 +351,7 @@ model-viewer {
         align-content: flex-start;
     }
 
-    /*
     div.wrapper.heading, div.wrapper.text {
         min-width: 0;
     }
-
-     */
 }
