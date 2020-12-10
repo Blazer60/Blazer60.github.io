@@ -11,11 +11,6 @@
     --primary-colour: #101010;
     --secondary-colour: #4000ff;
     --tertiary-colour: #B6FB00;
-
-    /* Dark Purple: 0c0032 */
-    /* #B6FB00 */
-
-    --resolution-min: 640px;
 }
 
 /*
@@ -305,7 +300,7 @@ model-viewer {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/projects/cardGame/mainBanner.png") center;
 }
 
-@media only screen and (min-width: 960px){
+@media only screen and (min-width: 960px) {
     /* Navigation */
     .hide-on-desktop {
         display: none;
@@ -362,5 +357,12 @@ model-viewer {
 
     div.wrapper.heading, div.wrapper.text {
         min-width: 0;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    /* Wrappers */
+    div.wrapper {
+        padding: 0 10px;
     }
 }
