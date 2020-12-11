@@ -13,15 +13,15 @@ function normalise(x, min, max) {
     return (x - min) / (max - min);
 }
 
-function rgba_lerp(start, stop, time) {
+function rgba_lerp(from, to, time) {
     for (let i = 0; i < 4; i++) {
-        stop[i] = Math.round(lerp(start[i], stop[i], time));
+        to[i] = Math.round(lerp(from[i], to[i], time));
     }
-    return stop;
+    return to;
 }
 
-function lerp(min, max, time) {
-    return (max - min) * time + min;
+function lerp(from, to, time) {
+    return from + time * (to - from);
 }
 
 class Particle {
@@ -29,7 +29,7 @@ class Particle {
         /* Size */
         this.starting_size = get_random_number(30, 40);
         this.size = this.starting_size;
-        this.decay_rate = 10.0;
+        this.decay_rate = 5.0;
 
         /* Vectors */
         this.vel = [get_random_number(-40, 40), get_random_number(-40, 40)];
@@ -44,8 +44,8 @@ class Particle {
         this.rotation_speed = get_random_number(-3.14 / 16, 3.14 / 16);
 
         /* Colours (rgba form) */
-        this.starting_colour = [255, 0, 0, 0.5];
-        this.final_colour = [0, 255, 0, 0.5];
+        this.starting_colour = [182, 251, 0, 0.5];
+        this.final_colour = [64, 0, 255, 0.5];
         this.colour = [...this.starting_colour];
 
         this.alive = true;
@@ -67,7 +67,7 @@ class Particle {
         this.size = Math.max(0, this.size - (this.decay_rate * delta_time));
 
         /* update colours */
-        this.colour = rgba_lerp(this.starting_colour, this.final_colour, normalise(this.size, 0, this.starting_size));
+        this.colour = rgba_lerp([...this.final_colour], [...this.starting_colour], normalise(this.size, 0, this.starting_size));
 
         /* Check size to see if it dies */
         if (this.size <= 0) {
@@ -92,3 +92,5 @@ class Particle {
         ctx.restore();
     }
 }
+
+console.log(normalise(35, 0, 50));
