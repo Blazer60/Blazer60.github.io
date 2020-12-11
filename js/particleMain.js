@@ -14,16 +14,21 @@ let ctx = canvas.getContext("2d");
 let last_delta = 0;
 
 function update_delta_time() {
-    const time = Date.now()/1000;
+    const time = Date.now() / 1000;
     const delta_time = time - last_delta;
     last_delta = time;
     return delta_time;
 }
 
+function resize_canvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
 function draw(deltaTime) {
 
     ctx.fillStyle = "blue";
-    ctx.fillRect(0, 0, ctx.size.width, ctx.size.height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     //console.log(ctx.size.width);
     emitter.update(deltaTime);
@@ -36,10 +41,8 @@ function draw(deltaTime) {
 function main() {
     primaryColour = window.getComputedStyle(document.body).backgroundColor;
 
-    ctx.size = {
-        width: window.innerWidth,
-        height: window.innerHeight
-    };
+    window.addEventListener("resize", resize_canvas, false);
+    resize_canvas();
     draw(0);
 }
 

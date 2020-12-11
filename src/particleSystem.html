@@ -7,10 +7,22 @@
     <link rel="icon" href="../img/favicon.png">
 </head>
 <body>
-    <header></header>
-    <canvas id="canvas" style="min-height: 100vh"></canvas>
+<div class="column" style="min-height: 100vh">
+    <div class="column" style="flex-grow: 0">
+        <header></header>
+    </div>
 
-    <footer></footer>
+
+    <div class="column" style="min-width: 100vw">
+        <canvas id="canvas" style="position: absolute; top: 0; left: 0;"></canvas>
+    </div>
+
+    <div class="column" style="flex-grow: 0">
+        <footer></footer>
+    </div>
+</div>
+
+
 
     <script src="../js/particle.js"></script>
     <script src="../js/emitter.js"></script>

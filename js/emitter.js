@@ -7,10 +7,11 @@
 
 function getMousePos(canvas, evt) {
     let rect = canvas.getBoundingClientRect();
-    pos = [
+    let pos = [
         evt.clientX - rect.left,
         evt.clientY - rect.top
     ]
+    console.log(pos[0] + ", " + pos[1]);
     return pos;
 }
 
