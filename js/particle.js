@@ -11,7 +11,7 @@ function get_random_number(min, max) {
 class Particle {
     constructor(pos) {
         this.vel = [get_random_number(-40, 40), get_random_number(-40, 40)];
-        this.acc = [get_random_number(-40, 40), get_random_number(-40, 40)];
+        this.acc = [get_random_number(-40, 40), get_random_number(-80, 0)];
         this.size = get_random_number(30, 40);
         this.decay_rate = 10.0;
         this.rotation = 0;
@@ -55,7 +55,7 @@ class Particle {
         ctx.translate(this.pos[0] + this.size / 2, this.pos[1] + this.size / 2);
         ctx.rotate(this.rotation);
         ctx.rect(-this.size / 2, -this.size / 2, this.size, this.size);
-        ctx.fillStyle = "rgb(182, 251, 0)";
+        ctx.fillStyle = "rgba(182, 251, 0, 0.5)";
         ctx.fill();
 
         ctx.restore();

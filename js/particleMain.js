@@ -42,6 +42,8 @@ function draw(deltaTime) {
     emitter.update(deltaTime);
 
     emitter.render(ctx);
+    ctx.fillStyle = "rgb(182, 251, 0)";
+    ctx.fillText((Math.round(1 / deltaTime).toString()), 10, 10);
     window.requestAnimationFrame(function (){draw(update_delta_time(), ctx);});
 }
 
@@ -49,6 +51,7 @@ function draw(deltaTime) {
 function main() {
     primaryColour = window.getComputedStyle(document.body).backgroundColor;
     document.onmousemove = get_mouse_pos;
+    ctx.font = "30px Arial";
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();
