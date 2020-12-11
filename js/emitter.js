@@ -5,27 +5,17 @@
  * @author: Ryan Purse
  */
 
-function getMousePos(canvas, evt) {
-    let rect = canvas.getBoundingClientRect();
-    let pos = [
-        evt.clientX - rect.left,
-        evt.clientY - rect.top
-    ]
-    console.log(pos[0] + ", " + pos[1]);
-    return pos;
-}
-
 class Emitter {
     constructor(max_particle_count) {
         this.max_particle_count = max_particle_count;
-        this.particle_spawn_rate = 0.1;
+        this.particle_spawn_rate = 0.01;
         this.spawn_time = 0.0;
         this.particles = [];
     }
 
     create_particle() {
         /* Move to mouse pos */
-        this.particles.push(new Particle([0, 0]));
+        this.particles.push(new Particle([mouse_pos[0], mouse_pos[1]]));
     }
 
     update(delta_time) {

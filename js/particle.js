@@ -5,19 +5,22 @@
  */
 
 function get_random_number(min, max) {
-    return Math.random() * (max + 1) + min;
+    return Math.random() * (max - min) + min;
 }
 
 class Particle {
     constructor(pos) {
-        this.pos = pos;
-        this.vel = [get_random_number(0, 40), get_random_number(0, 40)];
-        this.acc = [get_random_number(-1, 1), get_random_number(-1, 1)];
-        this.size = 10.0;
+        this.vel = [0, 0];
+        this.acc = [get_random_number(-40, 40), get_random_number(-40, 40)];
+        this.size = 30.0;
         this.decay_rate = 10.0;
         this.rotation = 0;
         this.rotation_speed = 0;
         this.alive = true;
+        this.pos = [
+            pos[0] - this.size / 2,
+            pos[1] - this.size / 2
+        ];
     }
 
     update(delta_time) {
@@ -39,7 +42,7 @@ class Particle {
     }
 
     render(ctx) {
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "rgb(182, 251, 0)";
         ctx.fillRect(this.pos[0], this.pos[1], this.size, this.size);
     }
 }

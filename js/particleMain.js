@@ -6,9 +6,10 @@
  */
 
 let primaryColour = "";
-let emitter = new Emitter(40);
+let emitter = new Emitter(400);
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
+let mouse_pos = [0, 0]
 
 /* Delta Frames */
 let last_delta = 0;
@@ -20,6 +21,13 @@ function update_delta_time() {
     return delta_time;
 }
 
+function get_mouse_pos(event) {
+    mouse_pos = [
+        event.clientX,
+        event.clientY
+    ]
+}
+
 function resize_canvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -27,7 +35,7 @@ function resize_canvas() {
 
 function draw(deltaTime) {
 
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = primaryColour;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     //console.log(ctx.size.width);
@@ -40,6 +48,7 @@ function draw(deltaTime) {
 
 function main() {
     primaryColour = window.getComputedStyle(document.body).backgroundColor;
+    document.onmousemove = get_mouse_pos;
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();
