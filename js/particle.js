@@ -92,5 +92,3 @@ class Particle {
         ctx.restore();
     }
 }
-
-console.log(normalise(35, 0, 50));

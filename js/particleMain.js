@@ -30,7 +30,7 @@ let max_cross_wind = 0.0;
 
 
 let primaryColour = "";
-let emitter = new Emitter(400);
+let emitter = new Emitter(1000000);
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 let mouse_pos = [window.innerWidth / 2, window.innerHeight / 2]
@@ -85,6 +85,7 @@ function main() {
     document.onmousemove = get_mouse_pos;
     ctx.font = "30px Arial";
 
+    /* Set defaults from form */
     starting_colour_element.addEventListener("change", function () {
         starting_colour = hex_to_rgba(starting_colour_element.value);
     });
