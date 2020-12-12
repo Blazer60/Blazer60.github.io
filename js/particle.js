@@ -32,8 +32,8 @@ class Particle {
         this.decay_rate = decay_rate;
 
         /* Vectors */
-        this.vel = [get_random_number(-40, 40), get_random_number(-40, 40)];
-        this.acc = [get_random_number(-40, 40), get_random_number(-80, 0)];
+        this.vel = [get_random_number(-100, 100), get_random_number(-40, 40)];
+        this.acc = [0, get_random_number(-80, 0)];
         this.pos = [
             pos[0] - this.size / 2,
             pos[1] - this.size / 2

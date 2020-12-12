@@ -8,7 +8,7 @@
 class Emitter {
     constructor(max_particle_count) {
         this.max_particle_count = max_particle_count;
-        this.particle_spawn_rate = 0.01;
+        this.particle_spawn_rate = 1;
         this.spawn_time = 0.0;
         this.particles = [];
     }

@@ -5,12 +5,6 @@
  * @author: Ryan Purse
  */
 
-let primaryColour = "";
-let emitter = new Emitter(400);
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
-let mouse_pos = [0, 0]
-
 /* Delta Frames */
 let last_delta = 0;
 
@@ -23,6 +17,15 @@ let final_colour = [];
 
 let decay_element = document.getElementById("decay-rate");
 let decay_rate = 0.0;
+
+let spawn_element = document.getElementById("spawn-rate");
+
+
+let primaryColour = "";
+let emitter = new Emitter(400);
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+let mouse_pos = [0, 0]
 
 function hex_to_rgba(hex) {
     hex = hex.split("");
@@ -88,6 +91,11 @@ function main() {
        decay_rate = decay_element.value;
     });
     decay_rate = decay_element.value;
+
+    spawn_element.addEventListener("change", function () {
+        emitter.particle_spawn_rate = spawn_element.value;
+    });
+    emitter.particle_spawn_rate = spawn_element.value;
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();
