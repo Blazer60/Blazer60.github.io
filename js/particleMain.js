@@ -24,6 +24,10 @@ let gravity_element = document.getElementById("gravity");
 let min_gravity = 0.0;
 let max_gravity = 0.0;
 
+let cross_wind_element = document.getElementById("cross-wind");
+let min_cross_wind = 0.0;
+let max_cross_wind = 0.0;
+
 
 let primaryColour = "";
 let emitter = new Emitter(400);
@@ -107,6 +111,13 @@ function main() {
     })
     min_gravity = gravity_element.value * 0.8;
     max_gravity = gravity_element.value * 1.2;
+
+    cross_wind_element.addEventListener("change", function () {
+        min_cross_wind = cross_wind_element.value * 0.8;
+        max_cross_wind = cross_wind_element.value * 1.2;
+    })
+    min_cross_wind = cross_wind_element.value * 0.8;
+    max_cross_wind = cross_wind_element.value * 1.2;
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();

@@ -33,7 +33,7 @@ class Particle {
 
         /* Vectors */
         this.vel = [get_random_number(-100, 100), get_random_number(-100, 100)];
-        this.acc = [0, get_random_number(min_gravity, max_gravity)];
+        this.acc = [get_random_number(min_cross_wind, max_cross_wind), get_random_number(min_gravity, max_gravity)];
         this.pos = [
             pos[0] - this.size / 2,
             pos[1] - this.size / 2
