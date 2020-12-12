@@ -14,6 +14,24 @@ let mouse_pos = [0, 0]
 /* Delta Frames */
 let last_delta = 0;
 
+/* User inputs */
+let starting_colour_element = document.getElementById("starting-colour");
+let starting_colour = [];
+
+let final_colour_element = document.getElementById("final-colour");
+let final_colour = [];
+
+function hex_to_rgba(hex) {
+    hex = hex.split("");
+    let r = hex.splice(1, 2).join("");
+    let g = hex.splice(1, 2).join("");
+    let b = hex.splice(1, 2).join("");
+    r = parseInt(r, 16);
+    b = parseInt(b, 16);
+    g = parseInt(g, 16);
+    return [r, g, b, 0.5];
+}
+
 function update_delta_time() {
     const time = Date.now() / 1000;
     const delta_time = time - last_delta;
@@ -52,6 +70,16 @@ function main() {
     primaryColour = window.getComputedStyle(document.body).backgroundColor;
     document.onmousemove = get_mouse_pos;
     ctx.font = "30px Arial";
+
+    starting_colour_element.addEventListener("change", function () {
+        starting_colour = hex_to_rgba(starting_colour_element.value);
+    })
+    starting_colour = hex_to_rgba(starting_colour_element.value);
+
+    final_colour_element.addEventListener("change", function () {
+        final_colour = hex_to_rgba(final_colour_element.value);
+    })
+    final_colour = hex_to_rgba(final_colour_element.value);
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();

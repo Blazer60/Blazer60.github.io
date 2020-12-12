@@ -44,8 +44,8 @@ class Particle {
         this.rotation_speed = get_random_number(-3.14 / 16, 3.14 / 16);
 
         /* Colours (rgba form) */
-        this.starting_colour = [182, 251, 0, 0.5];
-        this.final_colour = [64, 0, 255, 0.5];
+        this.starting_colour = [...starting_colour];
+        this.final_colour = [...final_colour];
         this.colour = [...this.starting_colour];
 
         this.alive = true;
