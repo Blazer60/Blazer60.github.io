@@ -20,6 +20,10 @@ let decay_rate = 0.0;
 
 let spawn_element = document.getElementById("spawn-rate");
 
+let gravity_element = document.getElementById("gravity");
+let min_gravity = 0.0;
+let max_gravity = 0.0;
+
 
 let primaryColour = "";
 let emitter = new Emitter(400);
@@ -96,6 +100,13 @@ function main() {
         emitter.particle_spawn_rate = spawn_element.value;
     });
     emitter.particle_spawn_rate = spawn_element.value;
+
+    gravity_element.addEventListener("change", function () {
+        min_gravity = gravity_element.value * 0.8;
+        max_gravity = gravity_element.value * 1.2;
+    })
+    min_gravity = gravity_element.value * 0.8;
+    max_gravity = gravity_element.value * 1.2;
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();
