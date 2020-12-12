@@ -33,7 +33,7 @@ let primaryColour = "";
 let emitter = new Emitter(400);
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-let mouse_pos = [0, 0]
+let mouse_pos = [window.innerWidth / 2, window.innerHeight / 2]
 
 function hex_to_rgba(hex) {
     hex = hex.split("");
