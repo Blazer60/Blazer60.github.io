@@ -21,6 +21,9 @@ let starting_colour = [];
 let final_colour_element = document.getElementById("final-colour");
 let final_colour = [];
 
+let decay_element = document.getElementById("decay-rate");
+let decay_rate = 0.0;
+
 function hex_to_rgba(hex) {
     hex = hex.split("");
     let r = hex.splice(1, 2).join("");
@@ -73,13 +76,18 @@ function main() {
 
     starting_colour_element.addEventListener("change", function () {
         starting_colour = hex_to_rgba(starting_colour_element.value);
-    })
+    });
     starting_colour = hex_to_rgba(starting_colour_element.value);
 
     final_colour_element.addEventListener("change", function () {
         final_colour = hex_to_rgba(final_colour_element.value);
-    })
+    });
     final_colour = hex_to_rgba(final_colour_element.value);
+
+    decay_element.addEventListener("change", function () {
+       decay_rate = decay_element.value;
+    });
+    decay_rate = decay_element.value;
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();

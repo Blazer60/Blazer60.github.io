@@ -29,7 +29,7 @@ class Particle {
         /* Size */
         this.starting_size = get_random_number(30, 40);
         this.size = this.starting_size;
-        this.decay_rate = 5.0;
+        this.decay_rate = decay_rate;
 
         /* Vectors */
         this.vel = [get_random_number(-40, 40), get_random_number(-40, 40)];
