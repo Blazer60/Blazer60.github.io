@@ -7,23 +7,32 @@
     <link rel="icon" href="../img/favicon.png">
 </head>
 <body>
-<div class="column" style="min-height: 100vh">
-    <div class="column" style="flex-grow: 0">
-        <header></header>
+    <div class="column" style="min-height: 100vh">
+        <div class="column" style="flex-grow: 0">
+            <header></header>
+        </div>
+
+
+        <div class="debug column" style="min-width: 100vw">
+            <div class="debug text wrapper">
+                <span>
+                    <label for="starting-colour">Starting Colour:</label>
+                    <input type="color" id="starting-colour" name="starting-colour" value="#b6fb00">
+                </span>
+                <span>
+                    <label for="final-colour">Final Colour:</label>
+                    <input type="color" id="final-colour" name="final-colour" value="#4000ff">
+                </span>
+            </div>
+        </div>
+
+        <div class="column" style="flex-grow: 0">
+            <footer></footer>
+        </div>
     </div>
 
 
-    <div class="column" style="min-width: 100vw">
-        <canvas id="canvas" style="position: absolute; top: 0; left: 0; cursor: crosshair"></canvas>
-    </div>
-
-    <div class="column" style="flex-grow: 0">
-        <footer></footer>
-    </div>
-</div>
-
-
-
+    <canvas id="canvas" style="position: absolute; top: 0; left: 0; cursor: crosshair; z-index: -100"></canvas>
     <script src="../js/particle.js"></script>
     <script src="../js/emitter.js"></script>
     <script src="../js/particleMain.js"></script>
