@@ -99,6 +99,7 @@ class Particle {
         ctx.translate(this.pos[0] + this.size / 2, this.pos[1] + this.size / 2);
         ctx.rotate(this.rotation);
         ctx.rect(-this.size / 2, -this.size / 2, this.size, this.size);
+        //ctx.arc(0, 0, this.size, 0, 2 * Math.PI);
         ctx.fillStyle = "rgba(" + this.colour[0] + ", " + this.colour[1] + ", " + this.colour[2] + ", " + this.colour[3] + ")";
         ctx.fill();
 
