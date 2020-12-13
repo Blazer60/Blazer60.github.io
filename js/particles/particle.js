@@ -26,12 +26,30 @@ function lerp(from, to, time) {
 }
 
 class Particle {
-    constructor(pos) {
+    constructor() {
         /* Size */
+        this.starting_size = 0.0;
+        this.size = 0.0;
+
+        /* Vectors */
+        this.vel = [0.0, 0.0];
+        this.acc = [0.0, 0.0];
+        this.pos = [0.0, 0.0];
+
+        /* Rotation */
+        this.rotation = 0;
+        this.rotation_speed = get_random_number(-3.14 / 16, 3.14 / 16);
+
+        /* Colours (rgba form) */
+        this.colour = [1, 1, 1, 1];
+
+        this.alive = false;
+    }
+
+    enable(pos) {
         this.starting_size = get_random_number(30, 40);
         this.size = this.starting_size;
 
-        /* Vectors */
         this.vel = [get_random_number(-100, 100), get_random_number(-100, 100)];
         this.acc = [get_random_number(min_cross_wind, max_cross_wind), get_random_number(min_gravity, max_gravity)];
         this.pos = [
@@ -42,9 +60,6 @@ class Particle {
         /* Rotation */
         this.rotation = 0;
         this.rotation_speed = get_random_number(-3.14 / 16, 3.14 / 16);
-
-        /* Colours (rgba form) */
-        this.colour = [1, 1, 1, 1];
 
         this.alive = true;
     }
