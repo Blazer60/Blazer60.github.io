@@ -25,6 +25,9 @@ let cross_wind_element = document.getElementById("cross-wind");
 let min_cross_wind = 0.0;
 let max_cross_wind = 0.0;
 
+let center_element = document.getElementById("spawn-center");
+let spawn_at_center = true;
+
 
 
 
@@ -53,10 +56,13 @@ function update_delta_time() {
 }
 
 function get_mouse_pos(event) {
-    mouse_pos = [
-        event.clientX,
-        event.clientY
-    ]
+    mouse_pos = [canvas.width / 2, canvas.height / 2]
+    if (spawn_at_center) {
+        mouse_pos = [
+            event.clientX,
+            event.clientY
+        ]
+    }
 }
 
 function resize_canvas() {
@@ -128,6 +134,11 @@ function main() {
        emitter.spawn_amount = spawn_amount_element.value > 0 ? Math.floor(spawn_amount_element.value) : 1;
     });
     emitter.spawn_amount = spawn_amount_element.value > 0 ? Math.floor(spawn_amount_element.value) : 1;
+
+    center_element.addEventListener("change", function () {
+        spawn_at_center = !spawn_at_center;
+    });
+
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();
