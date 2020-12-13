@@ -9,135 +9,139 @@
 </head>
 <body>
 <!-- Main Screen -->
-<header></header>
+
 <div class="column" style="min-height: 100vh">
-
-
-<div class="column">
-    <div class="heading wrapper">
-        <h1>Particle Emitter</h1>
-        <hr>
-    </div>
-    <div class="text wrapper">
-        <p>Change the values to change how the emitter behaves. The emitter will follow your mouse. For mobile, touch
-            the screen to move the emitter.</p>
+    <div class="column" style="flex-grow: 0">
+        <header></header>
     </div>
 
-    <!-- Options Menu -->
-    <div class="text wrapper">
-
-        <!-- Particle Cap -->
-        <div class="row no-collapse">
-            <div class="center bottom column" style="text-align: right">
-                <label for="particle-cap">Particle Cap: &nbsp;</label>
-            </div>
-            <div class="center column">
-                <input class="number" type="number" id="particle-cap" name="particle-cap" value="100" min="1"
-                       max="10000">
-            </div>
+    <div class="column">
+        <div class="heading wrapper">
+            <h1>Particle Emitter</h1>
+            <hr>
+        </div>
+        <div class="text wrapper">
+            <p>Change the values to change how the emitter behaves. The emitter will follow your mouse. For mobile,
+                touch
+                the screen to move the emitter.</p>
         </div>
 
-        <!-- Spawn Amount -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="spawn-amount">Spawn Amount: &nbsp;</label>
-            </div>
-            <div class="center column">
-                <input class="number" type="number" id="spawn-amount" name="spawn-amount" value="1" min="1" max="20">
-            </div>
-        </div>
+        <!-- Options Menu -->
+        <div class="text wrapper">
 
-        <!-- Starting Colour -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="starting-colour">Starting Colour: &nbsp;</label>
+            <!-- Particle Cap -->
+            <div class="row no-collapse">
+                <div class="center bottom column" style="text-align: right">
+                    <label for="particle-cap">Particle Cap: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input class="number" type="number" id="particle-cap" name="particle-cap" value="100" min="1"
+                           max="10000">
+                </div>
             </div>
-            <div class="center column">
-                <input type="color" id="starting-colour" name="starting-colour" value="#b6fb00">
-            </div>
-        </div>
 
-        <!-- Final Colour -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="final-colour">Final Colour: &nbsp;</label>
+            <!-- Spawn Amount -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="spawn-amount">Spawn Amount: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input class="number" type="number" id="spawn-amount" name="spawn-amount" value="1" min="1"
+                           max="20">
+                </div>
             </div>
-            <div class="center column">
-                <input type="color" id="final-colour" name="final-colour" value="#4000ff">
-            </div>
-        </div>
 
-        <!-- Spawn Rate -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="spawn-rate">Spawn Rate: &nbsp;</label>
+            <!-- Starting Colour -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="starting-colour">Starting Colour: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input type="color" id="starting-colour" name="starting-colour" value="#b6fb00">
+                </div>
             </div>
-            <div class="center column">
-                <input type="range" id="spawn-rate" name="spawn-rate" min="0" max="100" step="0.01" value="20">
-            </div>
-        </div>
 
-        <!-- Decay Rate -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="decay-rate">Decay Rate: &nbsp;</label>
+            <!-- Final Colour -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="final-colour">Final Colour: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input type="color" id="final-colour" name="final-colour" value="#4000ff">
+                </div>
             </div>
-            <div class="center column">
-                <input type="range" id="decay-rate" name="decay-rate" min="0.1" max="5" step="0.01" value="1">
-            </div>
-        </div>
 
-        <!-- Gravity -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="gravity">Gravity: &nbsp;</label>
+            <!-- Spawn Rate -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="spawn-rate">Spawn Rate: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input type="range" id="spawn-rate" name="spawn-rate" min="0" max="100" step="0.01" value="20">
+                </div>
             </div>
-            <div class="center column">
-                <input type="range" id="gravity" name="gravity" min="-400" max="400" value="0">
-            </div>
-        </div>
 
-        <!-- Cross Wind -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="cross-wind">Cross Wind: &nbsp;</label>
+            <!-- Decay Rate -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="decay-rate">Decay Rate: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input type="range" id="decay-rate" name="decay-rate" min="0.1" max="5" step="0.01" value="1">
+                </div>
             </div>
-            <div class="center column">
-                <input type="range" id="cross-wind" name="cross-wind" min="-400" max="400" value="0">
-            </div>
-        </div>
 
-        <!-- Spawn at Center -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="spawn-center">Spawn at center: &nbsp;</label>
+            <!-- Gravity -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="gravity">Gravity: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input type="range" id="gravity" name="gravity" min="-400" max="400" value="0">
+                </div>
             </div>
-            <div class="center column">
-                <input type="checkbox" id="spawn-center" name="spawn-center">
-            </div>
-        </div>
 
-        <!-- Reverse Render -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="reverse-render">Reverse Render: &nbsp;</label>
+            <!-- Cross Wind -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="cross-wind">Cross Wind: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input type="range" id="cross-wind" name="cross-wind" min="-400" max="400" value="0">
+                </div>
             </div>
-            <div class="center column">
-                <input type="checkbox" id="reverse-render" name="reverse-render">
-            </div>
-        </div>
 
-        <!-- Shape -->
-        <div class="row no-collapse">
-            <div class="center bottom column">
-                <label for="circles">Render Circles: &nbsp;</label>
+            <!-- Spawn at Center -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="spawn-center">Spawn at center: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input type="checkbox" id="spawn-center" name="spawn-center">
+                </div>
             </div>
-            <div class="center column">
-                <input type="checkbox" id="circles" name="circles">
+
+            <!-- Reverse Render -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="reverse-render">Reverse Render: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input type="checkbox" id="reverse-render" name="reverse-render">
+                </div>
+            </div>
+
+            <!-- Shape -->
+            <div class="row no-collapse">
+                <div class="center bottom column">
+                    <label for="circles">Render Circles: &nbsp;</label>
+                </div>
+                <div class="center column">
+                    <input type="checkbox" id="circles" name="circles">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <div class="column" style="flex-grow: 0">
         <footer></footer>
