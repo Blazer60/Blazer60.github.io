@@ -61,8 +61,9 @@ function get_mouse_pos(event) {
 
 
 function resize_canvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    canvas.height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    console.log("Resized Canvas");
 }
 
 
