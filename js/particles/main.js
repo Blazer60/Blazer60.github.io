@@ -9,6 +9,7 @@
 let last_delta = 0;
 
 /* User inputs */
+let particle_cap_element = document.getElementById("particle-cap");
 let starting_colour_element = document.getElementById("starting-colour");
 let final_colour_element = document.getElementById("final-colour");
 let decay_element = document.getElementById("decay-rate");
@@ -22,6 +23,8 @@ let max_gravity = 0.0;
 let cross_wind_element = document.getElementById("cross-wind");
 let min_cross_wind = 0.0;
 let max_cross_wind = 0.0;
+
+
 
 
 let primaryColour = "";
@@ -104,16 +107,23 @@ function main() {
     gravity_element.addEventListener("change", function () {
         min_gravity = gravity_element.value * 0.8;
         max_gravity = gravity_element.value * 1.2;
-    })
+    });
     min_gravity = gravity_element.value * 0.8;
     max_gravity = gravity_element.value * 1.2;
 
     cross_wind_element.addEventListener("change", function () {
         min_cross_wind = cross_wind_element.value * 0.8;
         max_cross_wind = cross_wind_element.value * 1.2;
-    })
+    });
     min_cross_wind = cross_wind_element.value * 0.8;
     max_cross_wind = cross_wind_element.value * 1.2;
+
+    particle_cap_element.addEventListener("change", function () {
+        emitter.set_p_size(particle_cap_element.value);
+        //emitter.change_size = particle_cap_element.value;
+    });
+    emitter.set_p_size(particle_cap_element.value);
+    //emitter.change_size = particle_cap_element.value;
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();

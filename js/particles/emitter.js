@@ -17,6 +17,17 @@ class Emitter {
         this.particle_start_colour = [];
         this.particle_end_colour = [];
         this.particle_decay_rate = 40.0;
+
+        this.particles = [];
+        this.set_p_size(this.max_particle_count);
+        this.p_next = 0;
+    }
+
+    set_p_size(size) {
+        if (size === undefined) {
+            size = 1;
+        }
+        this.max_particle_count = size;
         this.particles = [];
         for (let i = 0; i < this.max_particle_count; i++) {
             this.particles[i] = new Particle();
