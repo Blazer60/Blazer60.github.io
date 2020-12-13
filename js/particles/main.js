@@ -11,9 +11,7 @@ let last_delta = 0;
 /* User inputs */
 let starting_colour_element = document.getElementById("starting-colour");
 let final_colour_element = document.getElementById("final-colour");
-
 let decay_element = document.getElementById("decay-rate");
-let decay_rate = 0.0;
 
 let spawn_element = document.getElementById("spawn-rate");
 
@@ -94,9 +92,9 @@ function main() {
     emitter.particle_end_colour = hex_to_rgba(final_colour_element.value);
 
     decay_element.addEventListener("change", function () {
-       decay_rate = decay_element.value;
+       emitter.particle_decay_rate = decay_element.value;
     });
-    decay_rate = decay_element.value;
+    emitter.particle_decay_rate = decay_element.value;
 
     spawn_element.addEventListener("change", function () {
         emitter.particle_spawn_rate = 1 / spawn_element.value;

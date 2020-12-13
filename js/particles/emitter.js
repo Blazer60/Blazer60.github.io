@@ -16,6 +16,7 @@ class Emitter {
         /* Particle "globals" */
         this.particle_start_colour = [];
         this.particle_end_colour = [];
+        this.particle_decay_rate = 30.0;
         this.particles = [];
     }
 
@@ -34,7 +35,7 @@ class Emitter {
 
         /* update particles */
         for (let i = this.particles.length - 1; i >= 0; i--) {
-            this.particles[i].update(delta_time, this.particle_start_colour, this.particle_end_colour);
+            this.particles[i].update(delta_time, this.particle_start_colour, this.particle_end_colour, this.particle_decay_rate);
             if (!this.particles[i].alive) {
                 this.particles.splice(i, 1);
             }

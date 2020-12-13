@@ -30,7 +30,6 @@ class Particle {
         /* Size */
         this.starting_size = get_random_number(30, 40);
         this.size = this.starting_size;
-        this.decay_rate = decay_rate;
 
         /* Vectors */
         this.vel = [get_random_number(-100, 100), get_random_number(-100, 100)];
@@ -50,7 +49,7 @@ class Particle {
         this.alive = true;
     }
 
-    update(delta_time, starting_colour, final_colour) {
+    update(delta_time, starting_colour, final_colour, decay_rate) {
         /* Update Velocity */
         this.vel[0] += this.acc[0] * delta_time;
         this.vel[1] += this.acc[1] * delta_time;
@@ -63,7 +62,7 @@ class Particle {
         this.rotation += this.rotation_speed;
 
         /* Update size */
-        this.size = Math.max(0, this.size - (this.decay_rate * delta_time));
+        this.size = Math.max(0, this.size - (decay_rate * delta_time));
 
         /* update colours */
         this.colour = rgba_lerp(final_colour, starting_colour, normalise(this.size, 0, this.starting_size));
