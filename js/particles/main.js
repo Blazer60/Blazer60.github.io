@@ -30,8 +30,7 @@ let spawn_at_center = true;
 
 let reverse_render_element = document.getElementById("reverse-render");
 
-
-
+let render_circles_element = document.getElementById("circles");
 
 let primaryColour = "";
 let emitter = new Emitter(1000);
@@ -143,6 +142,10 @@ function main() {
 
     reverse_render_element.addEventListener("change", function () {
         emitter.render_new_first = !emitter.render_new_first;
+    });
+
+    render_circles_element.addEventListener("change", function () {
+       emitter.is_particle_circle = !emitter.is_particle_circle;
     });
 
 

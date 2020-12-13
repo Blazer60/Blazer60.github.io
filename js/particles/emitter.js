@@ -19,6 +19,7 @@ class Emitter {
         this.particle_start_colour = [];
         this.particle_end_colour = [];
         this.particle_decay_rate = 40.0;
+        this.is_particle_circle = false;
 
         this.particles = [];
         this.set_p_size(this.max_particle_count);
@@ -79,13 +80,13 @@ class Emitter {
         if (this.render_new_first) {
             /* Render newest first */
             for (let i = p_first; i !== this.p_last; i = this.loop_back(i)) {
-                this.particles[i].render(ctx);
+                this.particles[i].render(ctx, this.is_particle_circle);
             }
         }
         else {
             /* Render oldest first */
             for (let i = this.p_last; i !== p_first; i = (i + 1) % this.particles.length) {
-                this.particles[i].render(ctx);
+                this.particles[i].render(ctx, this.is_particle_circle);
             }
         }
         /* pulse loop */

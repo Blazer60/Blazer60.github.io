@@ -88,18 +88,18 @@ class Particle {
         }
     }
 
-    render(ctx) {
+    render(ctx, is_circle) {
         /* Stops rotation being applied exponentially */
         ctx.save();
         ctx.beginPath();
-        /*
-        ctx.fillStyle = "rgb(182, 251, 0)";
-        ctx.fillRect(this.pos[0], this.pos[1], this.size, this.size);
-         */
         ctx.translate(this.pos[0] + this.size / 2, this.pos[1] + this.size / 2);
         ctx.rotate(this.rotation);
-        ctx.rect(-this.size / 2, -this.size / 2, this.size, this.size);
-        //ctx.arc(0, 0, this.size, 0, 2 * Math.PI);
+        if (is_circle) {
+            ctx.arc(0, 0, this.size, 0, 2 * Math.PI);
+        }
+        else {
+            ctx.rect(-this.size / 2, -this.size / 2, this.size, this.size);
+        }
         ctx.fillStyle = "rgba(" + this.colour[0] + ", " + this.colour[1] + ", " + this.colour[2] + ", " + this.colour[3] + ")";
         ctx.fill();
 
