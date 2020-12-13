@@ -16,7 +16,7 @@ class Emitter {
         /* Particle "globals" */
         this.particle_start_colour = [];
         this.particle_end_colour = [];
-        this.particle_decay_rate = 30.0;
+        this.particle_decay_rate = 40.0;
         this.particles = [];
     }
 
