@@ -5,152 +5,61 @@
  * @author: Ryan Purse
  */
 
+/* User inputs */
+let particle_cap_element = document.getElementById("particle-cap");
+let spawn_amount_element = document.getElementById("spawn-amount");
+let starting_colour_element = document.getElementById("starting-colour");
+let final_colour_element = document.getElementById("final-colour");
+let spawn_element = document.getElementById("spawn-rate");
+let decay_element = document.getElementById("decay-rate");
+let gravity_element = document.getElementById("gravity");
+let cross_wind_element = document.getElementById("cross-wind");
+let center_element = document.getElementById("spawn-center");
+let reverse_render_element = document.getElementById("reverse-render");
+let render_circles_element = document.getElementById("circles");
+
 /* Delta Frames */
 let last_delta = 0;
 
-/* User inputs */
-let particle_cap_element = document.getElementById("particle-cap");
-let starting_colour_element = document.getElementById("starting-colour");
-let final_colour_element = document.getElementById("final-colour");
-let decay_element = document.getElementById("decay-rate");
-let spawn_amount_element = document.getElementById("spawn-amount");
-
-let spawn_element = document.getElementById("spawn-rate");
-
-let gravity_element = document.getElementById("gravity");
+/* Globals */
 let min_gravity = 0.0;
 let max_gravity = 0.0;
-
-let cross_wind_element = document.getElementById("cross-wind");
 let min_cross_wind = 0.0;
 let max_cross_wind = 0.0;
-
-let center_element = document.getElementById("spawn-center");
 let spawn_at_center = true;
-
-let reverse_render_element = document.getElementById("reverse-render");
-
-let render_circles_element = document.getElementById("circles");
-
 let primaryColour = "";
 let emitter = new Emitter(1000);
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 let mouse_pos = [window.innerWidth / 2, window.innerHeight / 2]
 
-function hex_to_rgba(hex) {
-    hex = hex.split("");
-    let r = hex.splice(1, 2).join("");
-    let g = hex.splice(1, 2).join("");
-    let b = hex.splice(1, 2).join("");
-    r = parseInt(r, 16);
-    b = parseInt(b, 16);
-    g = parseInt(g, 16);
-    return [r, g, b, 0.5];
-}
-
-function update_delta_time() {
-    const time = Date.now() / 1000;
-    const delta_time = time - last_delta;
-    last_delta = time;
-    return delta_time;
-}
-
-function get_mouse_pos(event) {
-    mouse_pos = [canvas.width / 2, canvas.height / 2]
-    if (spawn_at_center) {
-        mouse_pos = [
-            event.clientX,
-            event.clientY
-        ]
-    }
-}
-
-function resize_canvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
 
 function draw(deltaTime) {
+    /* Logic update */
+    emitter.update(deltaTime);
 
+    /* Render update */
     ctx.fillStyle = primaryColour;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    //console.log(ctx.size.width);
-    emitter.update(deltaTime);
-
     emitter.render(ctx);
+
+    /* FPS Counter */
     ctx.fillStyle = "rgb(182, 251, 0)";
     ctx.fillText((Math.round(1 / deltaTime).toString()), 10, 10);
-    window.requestAnimationFrame(function (){draw(update_delta_time(), ctx);});
+
+    window.requestAnimationFrame(function () {
+        draw(update_delta_time(), ctx);
+    });
 }
 
 
 function main() {
     primaryColour = window.getComputedStyle(document.body).backgroundColor;
-    document.onmousemove = get_mouse_pos;
     ctx.font = "30px Arial";
 
-    /* Set defaults from form */
-    starting_colour_element.addEventListener("change", function () {
-        emitter.particle_start_colour = hex_to_rgba(starting_colour_element.value);
-    });
-    emitter.particle_start_colour = hex_to_rgba(starting_colour_element.value);
+    set_event_listeners();
 
-    final_colour_element.addEventListener("change", function () {
-        emitter.particle_end_colour = hex_to_rgba(final_colour_element.value);
-    });
-    emitter.particle_end_colour = hex_to_rgba(final_colour_element.value);
-
-    decay_element.addEventListener("change", function () {
-       emitter.particle_decay_rate = decay_element.value;
-    });
-    emitter.particle_decay_rate = decay_element.value;
-
-    spawn_element.addEventListener("change", function () {
-        emitter.particle_spawn_rate = 1 / spawn_element.value;
-    });
-    emitter.particle_spawn_rate = 1 / spawn_element.value;
-
-    gravity_element.addEventListener("change", function () {
-        min_gravity = gravity_element.value * 0.8;
-        max_gravity = gravity_element.value * 1.2;
-    });
-    min_gravity = gravity_element.value * 0.8;
-    max_gravity = gravity_element.value * 1.2;
-
-    cross_wind_element.addEventListener("change", function () {
-        min_cross_wind = cross_wind_element.value * 0.8;
-        max_cross_wind = cross_wind_element.value * 1.2;
-    });
-    min_cross_wind = cross_wind_element.value * 0.8;
-    max_cross_wind = cross_wind_element.value * 1.2;
-
-    particle_cap_element.addEventListener("change", function () {
-        emitter.set_p_size(particle_cap_element.value);
-    });
-    emitter.set_p_size(particle_cap_element.value);
-
-    spawn_amount_element.addEventListener("change", function () {
-       emitter.spawn_amount = spawn_amount_element.value > 0 ? Math.floor(spawn_amount_element.value) : 1;
-    });
-    emitter.spawn_amount = spawn_amount_element.value > 0 ? Math.floor(spawn_amount_element.value) : 1;
-
-    center_element.addEventListener("change", function () {
-        spawn_at_center = !spawn_at_center;
-    });
-
-    reverse_render_element.addEventListener("change", function () {
-        emitter.render_new_first = !emitter.render_new_first;
-    });
-
-    render_circles_element.addEventListener("change", function () {
-       emitter.is_particle_circle = !emitter.is_particle_circle;
-    });
-
-
-    window.addEventListener("resize", resize_canvas, false);
-    resize_canvas();
     draw(0);
 }
 

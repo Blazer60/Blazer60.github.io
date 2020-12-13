@@ -4,26 +4,6 @@
  * @author: Ryan Purse
  */
 
-function get_random_number(min, max) {
-    return Math.random() * (max - min) + min;
-}
-
-function normalise(x, min, max) {
-    /* returns a number between 0-1 based on x */
-    return (x - min) / (max - min);
-}
-
-function rgba_lerp(from, to, time) {
-    let colour = [0, 0, 0, 0];
-    for (let i = 0; i < 4; i++) {
-        colour[i] = Math.round(lerp(from[i], to[i], time));
-    }
-    return colour;
-}
-
-function lerp(from, to, time) {
-    return from + time * (to - from);
-}
 
 class Particle {
     constructor() {
@@ -46,6 +26,10 @@ class Particle {
         this.alive = false;
     }
 
+    /*
+     * Reset function to reduce processor
+     * load compared to malloc
+     */
     enable(pos) {
         this.starting_size = get_random_number(30, 40);
         this.size = this.starting_size;
@@ -89,17 +73,20 @@ class Particle {
     }
 
     render(ctx, is_circle) {
-        /* Stops rotation being applied exponentially */
+        /* Stops rotation & position being applied exponentially */
         ctx.save();
         ctx.beginPath();
+
         ctx.translate(this.pos[0] + this.size / 2, this.pos[1] + this.size / 2);
         ctx.rotate(this.rotation);
+
         if (is_circle) {
             ctx.arc(0, 0, this.size, 0, 2 * Math.PI);
         }
         else {
             ctx.rect(-this.size / 2, -this.size / 2, this.size, this.size);
         }
+
         ctx.fillStyle = "rgba(" + this.colour[0] + ", " + this.colour[1] + ", " + this.colour[2] + ", " + this.colour[3] + ")";
         ctx.fill();
 
