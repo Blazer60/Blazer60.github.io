@@ -28,6 +28,8 @@ let max_cross_wind = 0.0;
 let center_element = document.getElementById("spawn-center");
 let spawn_at_center = true;
 
+let reverse_render_element = document.getElementById("reverse-render");
+
 
 
 
@@ -137,6 +139,10 @@ function main() {
 
     center_element.addEventListener("change", function () {
         spawn_at_center = !spawn_at_center;
+    });
+
+    reverse_render_element.addEventListener("change", function () {
+        emitter.render_new_first = !emitter.render_new_first;
     });
 
 
