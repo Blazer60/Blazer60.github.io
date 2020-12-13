@@ -28,7 +28,7 @@ function lerp(from, to, time) {
 class Particle {
     constructor(pos) {
         /* Size */
-        this.starting_size = get_random_number(90, 100);  // 30, 40
+        this.starting_size = get_random_number(30, 40);
         this.size = this.starting_size;
 
         /* Vectors */
@@ -62,7 +62,7 @@ class Particle {
         this.rotation += this.rotation_speed;
 
         /* Update size */
-        this.size = Math.max(0, this.size - this.size * decay_rate * delta_time);
+        this.size = Math.max(0, this.size - this.starting_size * decay_rate * delta_time);
 
         /* update colours */
         this.colour = rgba_lerp(final_colour, starting_colour, normalise(this.size, 0, this.starting_size));
