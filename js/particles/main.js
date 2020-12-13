@@ -13,6 +13,7 @@ let particle_cap_element = document.getElementById("particle-cap");
 let starting_colour_element = document.getElementById("starting-colour");
 let final_colour_element = document.getElementById("final-colour");
 let decay_element = document.getElementById("decay-rate");
+let spawn_amount_element = document.getElementById("spawn-amount");
 
 let spawn_element = document.getElementById("spawn-rate");
 
@@ -120,10 +121,13 @@ function main() {
 
     particle_cap_element.addEventListener("change", function () {
         emitter.set_p_size(particle_cap_element.value);
-        //emitter.change_size = particle_cap_element.value;
     });
     emitter.set_p_size(particle_cap_element.value);
-    //emitter.change_size = particle_cap_element.value;
+
+    spawn_amount_element.addEventListener("change", function () {
+       emitter.spawn_amount = spawn_amount_element.value > 0 ? Math.floor(spawn_amount_element.value) : 1;
+    });
+    emitter.spawn_amount = spawn_amount_element.value > 0 ? Math.floor(spawn_amount_element.value) : 1;
 
     window.addEventListener("resize", resize_canvas, false);
     resize_canvas();

@@ -12,6 +12,7 @@ class Emitter {
         /* Particle Spawning */
         this.particle_spawn_rate = 1;
         this.spawn_time = 0.0;
+        this.spawn_amount = 1;
 
         /* Particle "globals" */
         this.particle_start_colour = [];
@@ -24,10 +25,10 @@ class Emitter {
     }
 
     set_p_size(size) {
-        if (size === undefined) {
+        if (size === undefined || size < 1) {
             size = 1;
         }
-        this.max_particle_count = size;
+        this.max_particle_count = Math.floor(size);
         this.particles = [];
         for (let i = 0; i < this.max_particle_count; i++) {
             this.particles[i] = new Particle();
@@ -45,7 +46,9 @@ class Emitter {
         /* check if you can spawn a new particle */
         this.spawn_time += delta_time;
         if (this.spawn_time > this.particle_spawn_rate) {
-            this.enable_particle();
+            for (let i = 0; i < this.spawn_amount; i++) {
+                this.enable_particle();
+            }
             this.spawn_time = 0.0;
         }
 
