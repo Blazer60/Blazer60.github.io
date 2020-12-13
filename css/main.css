@@ -63,7 +63,7 @@ footer {
 
 }
 
-h1, h2, h3, h4, h5, p, a, span {
+h1, h2, h3, h4, h5, p, a, span, label {
     font-family: Calibri, sans-serif;
     color: var(--white);
 }
@@ -284,7 +284,7 @@ model-viewer {
 }
 
 input {
-    border: 0 solid;
+    border: 1px transparent solid;
     padding: 0;
     margin: 0;
     background-color: rgba(0, 0, 0, 0);
@@ -292,6 +292,7 @@ input {
 }
 
 input.number {
+    border: 1px transparent solid;
     color: var(--white);
 }
 
