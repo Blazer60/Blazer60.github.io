@@ -10,10 +10,7 @@ let last_delta = 0;
 
 /* User inputs */
 let starting_colour_element = document.getElementById("starting-colour");
-let starting_colour = [];
-
 let final_colour_element = document.getElementById("final-colour");
-let final_colour = [];
 
 let decay_element = document.getElementById("decay-rate");
 let decay_rate = 0.0;
@@ -87,14 +84,14 @@ function main() {
 
     /* Set defaults from form */
     starting_colour_element.addEventListener("change", function () {
-        starting_colour = hex_to_rgba(starting_colour_element.value);
+        emitter.particle_start_colour = hex_to_rgba(starting_colour_element.value);
     });
-    starting_colour = hex_to_rgba(starting_colour_element.value);
+    emitter.particle_start_colour = hex_to_rgba(starting_colour_element.value);
 
     final_colour_element.addEventListener("change", function () {
-        final_colour = hex_to_rgba(final_colour_element.value);
+        emitter.particle_end_colour = hex_to_rgba(final_colour_element.value);
     });
-    final_colour = hex_to_rgba(final_colour_element.value);
+    emitter.particle_end_colour = hex_to_rgba(final_colour_element.value);
 
     decay_element.addEventListener("change", function () {
        decay_rate = decay_element.value;

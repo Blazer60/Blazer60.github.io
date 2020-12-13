@@ -8,8 +8,14 @@
 class Emitter {
     constructor(max_particle_count) {
         this.max_particle_count = max_particle_count;
+
+        /* Particle Spawning */
         this.particle_spawn_rate = 1;
         this.spawn_time = 0.0;
+
+        /* Particle "globals" */
+        this.particle_start_colour = [];
+        this.particle_end_colour = [];
         this.particles = [];
     }
 
@@ -28,7 +34,7 @@ class Emitter {
 
         /* update particles */
         for (let i = this.particles.length - 1; i >= 0; i--) {
-            this.particles[i].update(delta_time);
+            this.particles[i].update(delta_time, this.particle_start_colour, this.particle_end_colour);
             if (!this.particles[i].alive) {
                 this.particles.splice(i, 1);
             }
