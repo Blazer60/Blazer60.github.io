@@ -99,9 +99,9 @@ function main() {
     decay_rate = decay_element.value;
 
     spawn_element.addEventListener("change", function () {
-        emitter.particle_spawn_rate = spawn_element.value;
+        emitter.particle_spawn_rate = 1 / spawn_element.value;
     });
-    emitter.particle_spawn_rate = spawn_element.value;
+    emitter.particle_spawn_rate = 1 / spawn_element.value;
 
     gravity_element.addEventListener("change", function () {
         min_gravity = gravity_element.value * 0.8;
