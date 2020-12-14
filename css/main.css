@@ -13,6 +13,7 @@
     --tertiary-colour: #b6fb00;
 }
 
+
 /*
  * Used to identify where elements are on the page
  * Not to be used on live site
@@ -45,6 +46,10 @@ body {
     /* min-width: var(--resolution-min); */
 }
 
+/*
+ * Webkit scroll bars only apply to Chrome based browsers
+ * Firefox does not support webikit
+ */
 *::-webkit-scrollbar {
     width: 10px;
 
@@ -59,10 +64,8 @@ body {
     border-radius: 5px;
 }
 
-footer {
 
-}
-
+/* Text formatting */
 h1, h2, h3, h4, h5, p, a, span, label {
     font-family: Calibri, sans-serif;
     color: var(--white);
@@ -92,8 +95,8 @@ h1.black, h2.black, h3.black, h4.black, p.black, a.black {
     color: var(--black);
 }
 
-/* anchors */
 
+/* Anchors */
 a {
     cursor: pointer;
     text-decoration: none;
@@ -143,10 +146,8 @@ a.inline {
     font-size: inherit;
 }
 
-/* end anchors */
 
 /* Navigation */
-
 .navbar, .dropdown, .menu {
     display: flex;
     margin: 0;
@@ -191,11 +192,8 @@ a.inline {
     background-color: var(--primary-colour);
 }
 
-/* fix nav so it scales correctly on any screen */
-
 
 /* Flexbox div elements */
-
 div {
     display: flex;
     flex: 1;
@@ -231,10 +229,8 @@ div.bottom {
     align-content: flex-end;
 }
 
-/* End Flexbox div elements */
 
 /* Wrappers */
-
 div.wrapper {
     flex-flow: column wrap;
     flex-grow: 0;
@@ -253,8 +249,6 @@ div.wrapper.text {
     max-width: 22rem;
     min-width: 22rem;
 }
-
-/* end wrappers */
 
 hr {
     color: var(--secondary-colour);
@@ -283,6 +277,7 @@ model-viewer {
     --progress-mask: var(--primary-colour);
 }
 
+/* User input */
 input {
     border: 1px transparent solid;
     padding: 0;
@@ -313,6 +308,7 @@ input.number {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/projects/cardGame/mainBanner.jpg") center;
 }
 
+/* Desktop media screens */
 @media only screen and (min-width: 960px) {
     /* Navigation */
     .hide-on-desktop {
@@ -320,6 +316,7 @@ input.number {
     }
 }
 
+/* Mobile screens and some tablets */
 @media only screen and (max-width: 960px) {
     a {
         font-size: 24pt;
@@ -373,6 +370,10 @@ input.number {
     }
 }
 
+/*
+ * Extremely small screens such as the Galaxy Fold.
+ * Prevents overflow
+ */
 @media only screen and (max-width: 330px) {
     /* Wrappers */
     div.wrapper {
