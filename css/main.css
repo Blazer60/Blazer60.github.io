@@ -151,7 +151,7 @@ a.inline {
 .navbar, .dropdown, .menu {
     display: flex;
     margin: 0;
-    padding-left: 0;
+    padding: 0 0.1rem;
     transition: background-color 500ms ease-in-out;
 }
 
@@ -163,6 +163,7 @@ a.inline {
     display: block;
     position: relative;
     cursor: pointer;
+    padding: 0;
 }
 
 .navbar:first-child {
@@ -333,7 +334,12 @@ input.number {
         max-width: 100vw;
     }
 
+    .navbar li, .dropdown li, .menu li {
+        padding: 0 1rem;
+    }
+
     .dropdown {
+        padding-top: 1rem;
         right: 0;
     }
 
