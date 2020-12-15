@@ -1,0 +1,10 @@
+/*
+ * used for the GDP A2 Group Project page
+ * This will mainly contain id images so that they can be used for banners
+ * Created On: 15/12/2020
+ * @author: Ryan Purse
+ */
+
+#card-game-board {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/projects/cardGame/TokensAndAlchemyCardOnTable.jpg") center;
+}
