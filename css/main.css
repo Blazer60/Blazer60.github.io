@@ -111,6 +111,15 @@ a:hover {
     color: var(--tertiary-colour);
 }
 
+a.no-style {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 a.button {
     text-decoration: none;
     justify-content: center;
@@ -174,7 +183,7 @@ a.inline {
     position: absolute;
     margin-top: 0;
     left: 0;
-    top: -300%;
+    top: -400%;
     min-width: max-content;
     display: flex;
     flex-flow: column nowrap;
@@ -307,6 +316,10 @@ input.number {
 
 #card-game {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/projects/cardGame/mainBanner.jpg") center;
+}
+
+#ray-tracer {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/projects/rayTracer/mirrorRoomLarge.png") center;
 }
 
 /* Desktop media screens */

@@ -1,0 +1,57 @@
+/**
+ * CSS for a2raytracer.html
+ * Mainly provides background images that can be changed here with a fade.
+ * @author Ryan Purse
+ */
+
+#ray-tracer-header-banner {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)),
+            url("../img/projects/rayTracer/mirrorBall.png")
+            center
+            no-repeat;
+}
+
+#ray-tracer-mirror-room-banner {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../img/projects/rayTracer/mirrorRoomLarge.png")
+            center
+            no-repeat;
+}
+
+#ray-tracer-blue-red-ball-banner {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../img/projects/rayTracer/blueAndRedBall.png")
+            center
+            no-repeat;
+}
+
+div.ray-tracer-gallery {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(720px, 1fr));
+    justify-items: center;
+    align-items: center;
+    overflow: auto;
+}
+
+/** div.middle.column with some padding */
+div.ray-tracer-gallery-item {
+    display: flex;
+    align-content: center;
+    flex-flow: column wrap;
+    padding-bottom: 3rem;
+}
+
+img.ray-tracer-img {
+    max-width: 95%;
+    max-height: 95%;
+}
+
+@media only screen and (max-width: 960px) {
+    div.ray-tracer-gallery {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+}

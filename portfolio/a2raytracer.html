@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A2 Ray Tracer</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/a2raytracer.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+</head>
+<body>
+<!-- default style: main.css -->
+<header>
+    <nav role="navigation">
+        <ul class="menu">
+            <li>
+                <a class="hide-on-desktop">
+                    <!-- Hamburger Icon -->
+                    <svg class="menu-icon" viewBox="0 0 100 80" width="3rem" height="3rem">
+                        <rect y="0" width="100" height="20" rx="8"></rect>
+                        <rect y="30" width="100" height="20" rx="8"></rect>
+                        <rect y="60" width="100" height="20" rx="8"></rect>
+                    </svg>
+                </a>
+                <ul class="navbar">
+                    <li><a href="../portfolio/home.html">Home</a></li>
+                    <li><a href="../portfolio/gallery.html">Gallery</a></li>
+                    <li><a>Projects</a>
+                        <ul class="dropdown">
+                            <li><a href="../portfolio/groupproject.html">Card Game</a></li>
+                            <li><a href="../portfolio/mla.html">Machine Learning</a></li>
+                            <li><a href="../portfolio/a2raytracer.html">Ray Tracer</a></li>
+                            <li><a href="../portfolio/particleSystem.html">Particle Emitter</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="column" style="min-height: 3rem"></div>
+
+    <!-- The main Banner -->
+    <div class="row" id="ray-tracer-header-banner">
+        <div class="bottom center column" style="min-height: 80vh">
+            <div class="right column">
+                <div class="heading wrapper">
+                    <h1>MCG A2 Ray Tracer</h1>
+                    <hr>
+                    <h3>A Software Based Ray Tracer built in C++</h3>
+                </div>
+            </div>
+            <div class="row no-collapse">
+                <div class="wrapper">
+                    <a href="https://github.com/Blazer60/A2McgRayTracer" class="no-style">
+                        <img src="../img/logos/gitHubLogo.png" alt="GitHub Logo">
+                    </a>
+                </div>
+                <div class="wrapper">
+                    <img src="../img/logos/c++Logo.png" alt="C++ Logo">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+
+    <!-- Intro Section -->
+    <div class="row" style="min-height: 30vh">
+        <div class="bottom center column">
+            <div class="heading wrapper">
+                <h2>Built from the Ground Up</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>This is a software based ray tracer that was made for Mathematics for Computer Graphics at Bournemouth University. For every pixel on the screen, it casts a single ray out into the world and retrieves the colour value by bouncing off of different objects.</p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+
+    <!-- Project Requirements Sections -->
+    <div class="row" id="ray-tracer-mirror-room-banner">
+        <div class="bottom center column" style="min-height: 80vh">
+            <div class="heading wrapper">
+                <h2>Dependencies</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>The project was built from the ground up using GLM for maths functions and SDL to render the window. The limitations for SDL was that it could only be accessed through a drawPixel function that would be passed a position and a colour.</p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+
+    <!-- Top Level Overview -->
+    <div class="row" style="min-height: 40vh">
+        <div class="bottom center column">
+            <div class="heading wrapper">
+                <h2>Top Level Overview</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>When a ray is casted into the world it naively checks against every other object in the world to see if it has collided with anything. If it has hit something, it will calculate the light at that point. An additional ray is also casted towards every light source in the scene.</p>
+                <p>Once the lighting has been fully calculated, it will reflect the ray and repeat the whole process until it has reached the max bounce limit or it has run out of energy.</p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+
+    <!-- Red & Blue Sphere Image -->
+    <div class="row" id="ray-tracer-blue-red-ball-banner">
+        <div class="bottom center column" style="min-height: 80vh">
+            <div class="heading wrapper">
+                <h2>Optimisations</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>One of the major optimisations to this code would have been to add a quad-tree or some sort of bounding box hierarchy. This would have massively improved performance as a ray casted into the world would not have to check against every object.</p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+    <!-- GitHub Link -->
+    <div class="row">
+        <div class="bottom center column" style="min-height: 20vh">
+            <div class="heading wrapper">
+                <h2>GitHub</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>The source code for this project can be found on <a class="no-style" href="https://github.com/Blazer60/A2McgRayTracer" target="_blank">GitHub</a>.</p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="bottom column">
+            <div class="heading wrapper">
+                <h2>Gallery</h2>
+                <hr>
+            </div>
+            <div class="wrapper">
+                <p></p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+    <div class="center row">
+        <div class="ray-tracer-gallery">
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/threeSpheres.png" alt="Three Spheres Stacked on top of each other" class="ray-tracer-img">
+                <p>Three Reflective spheres stacked on top of each other.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/rgbTriangle.png" alt="" class="ray-tracer-img">
+                <p>An RGB Triangle on a flat plane.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/phong/PurpleBall-A.png" alt="" class="ray-tracer-img">
+                <p>Ambient lighting on a purple sphere.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/phong/PurpleBall-AD.png" alt="" class="ray-tracer-img">
+                <p>Ambient and Diffuse lighting on a purple sphere.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/phong/PurpleBall-ADS.png" alt="" class="ray-tracer-img">
+                <p>Ambient, Diffuse and Specular (<a href="https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model" class="no-style" target="_blank">Blinn-Phong</a>) lighting on a purple sphere.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/phong/PurpleBall-ADSR.png" alt="" class="ray-tracer-img">
+                <p>Blinn-Phong lighting with Reflections on a purple sphere.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/phong/PurpleBall-ADSR0.5.png" alt="" class="ray-tracer-img">
+                <p>Reflections intensity reduce on a purple sphere.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/phong/PurpleBall-D.png" alt="" class="ray-tracer-img">
+                <p>Diffuse lighting on a purple sphere.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/phong/PurpleBall-S.png" alt="" class="ray-tracer-img">
+                <p>Specular lighting only on a purple sphere.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/sphereCastingShadow.png" alt="" class="ray-tracer-img">
+                <p>Spheres casting shadows on other objects on the world.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/pointLights.png" alt="" class="ray-tracer-img">
+                <p>Four stacked spheres with different materials applied to them with a single point light.</p>
+            </div>
+
+            <div class="ray-tracer-gallery-item">
+                <img src="../img/projects/rayTracer/fourSpheres.png" alt="" class="ray-tracer-img">
+                <p>Directional light emitting on to four spheres.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- default style: main.css -->
+<footer>
+    <div class="row" style="background-color: var(--secondary-colour)">
+        <div class="row" style="padding: 0 1rem">
+            <p><a class="inline" href="mailto:ryanpurse@gmail.com" target="_blank">&copy; 2020 Ryan Purse</a></p>
+        </div>
+        <div class="center right row" style="padding: 0 1rem">
+            <p><a class="inline" href="mailto:ryanpurse@gmail.com" target="_blank">Created By: Ryan Purse</a></p>
+        </div>
+    </div>
+</footer></body>
+</html>
