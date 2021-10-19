@@ -66,7 +66,7 @@ body {
 
 
 /* Text formatting */
-h1, h2, h3, h4, h5, p, a, span, label {
+h1, h2, h3, h4, h5, p, a, span, label, ul, li {
     font-family: Calibri, sans-serif;
     color: var(--white);
 }
@@ -183,7 +183,7 @@ a.inline {
     position: absolute;
     margin-top: 0;
     left: 0;
-    top: -400%;
+    top: -500%;
     min-width: max-content;
     display: flex;
     flex-flow: column nowrap;

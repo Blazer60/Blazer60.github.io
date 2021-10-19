@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A2 Marble Run | GDPL Project</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/a2marblerun.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+</head>
+<body>
+  <header></header>
+
+
+  <!-- Top Banner -->
+  <div class="row" id="marble-run-main-banner">
+      <div class="bottom center column" style="min-height: 80vh">
+          <div class="right column">
+              <div class="heading wrapper">
+                  <h1>GDPL A2 Marble Run</h1>
+                  <hr>
+                  <h3>A Unity Project for Games Development Pipeline</h3>
+              </div>
+          </div>
+          <div class="row no-collapse">
+              <div class="wrapper">
+                  <img src="../img/logos/c%23Logo.png" alt="C# Logo">
+              </div>
+              <div class="wrapper">
+                  <img src="../img/logos/unityLogo.png" alt="Unity Logo">
+              </div>
+          </div>
+      </div>
+      <div class="column">
+
+      </div>
+  </div>
+
+
+  <!-- The actual unity project -->
+  <div id="unity-container" class="unity-desktop column center middle">
+      <p></p>
+      <canvas id="unity-canvas" width=960 height=600>
+
+      </canvas>
+      <div id="unity-loading-bar">
+          <div id="unity-logo">
+
+          </div>
+          <div id="unity-progress-bar-empty">
+              <div id="unity-progress-bar-full">
+
+              </div>
+          </div>
+      </div>
+      <div id="unity-warning">
+
+      </div>
+      <div class="right row">
+          <a class="button" id="unity-fullscreen-button">Full Screen</a>
+      </div>
+      <div class="column">
+          <div class="text wrapper">
+              <p>Controls:</p>
+              <ul>
+                  <li>Move: <span class="controls">WASD</span></li>
+                  <li>Ascend Vertically: <span class="controls">Space</span></li>
+                  <li>Descend Vertically: <span class="controls">Left Ctrl</span></li>
+                  <li>Toggle Cursor: <span class="controls">C</span></li>
+              </ul>
+              <p></p>
+          </div>
+      </div>
+  </div>
+
+
+  <!-- The Goal -->
+  <div class="row" id="marble-run-clock-face-banner" style="min-height: 80vh">
+      <div class="bottom center column">
+          <div class="heading wrapper">
+              <h2>The Goal</h2>
+              <hr>
+          </div>
+          <div class="text wrapper">
+              <p>The goal of the game development pipeline was to make a marble run with at least six distinct sections. Two of those sections must incorporate some non-real world physics. Additionally, one section must lift the marbles with real world physics.</p>
+          </div>
+      </div>
+      <div class="column">
+
+      </div>
+  </div>
+
+
+  <!-- The Theme -->
+  <div class="row">
+      <div class="bottom center column">
+          <div class="heading wrapper">
+              <h2>The Theme</h2>
+              <hr>
+          </div>
+          <div class="text wrapper">
+              <p>I decided to go with a clock theme similar to Mario Kart’s Tick-tock Clock. Each main section has a distinct colour to it with browns and golds connecting each of those sections.</p>
+          </div>
+      </div>
+      <div class="column">
+
+      </div>
+  </div>
+
+
+  <!-- Inverted Gravity Section -->
+  <div class="row" id="marble-run-inverted-gravity-banner" style="min-height: 80vh">
+      <div class="bottom center column">
+          <div class="heading wrapper">
+              <h2>Inverted Gravity Section</h2>
+              <hr>
+          </div>
+          <div class="text wrapper">
+              <p>When creating the marble run, I prototyped each section in rapid succession to see if my idea has worked. One of the most troubling sections was the inverted gravity section. My initial idea was for them to go all the way up and land on a single clock face. But I found out quickly that the marbles go too fast for the collision system in unity. In the end I made multiple clock faces that they would land on to reduce the air time in which they could accelerate in.</p>
+          </div>
+      </div>
+      <div class="column">
+
+      </div>
+  </div>
+
+
+  <!-- Credits -->
+  <div class="row">
+      <div class="bottom center column">
+          <div class="heading wrapper">
+              <h2>Credits</h2>
+              <hr>
+          </div>
+          <div class="wrapper">
+              <ul>
+                  <li>Zapsplat, Noisecreations, Large, Ball, Ring, Church, Long, Resonance (<a class="no-style" target="_blank" href="https://www.zapsplat.com/music/large-bell-ring-church-long-resonance/">link</a>)</li>
+                  <li>Zapsplat, The Sound Pack Tree, Alarm Clock Ticking (<a class="no-style" target="_blank" href="https://www.zapsplat.com/music/alarm-clock-ticking/">link</a>)</li>
+                  <li>Zapsplat, SmartSound Loop: Steady rattling tracks of a small driving tank, fast (<a class="no-style" target="_blank" href="https://www.zapsplat.com/music/loop-steady-rattling-tracks-of-a-small-driving-tank-fast/">link</a>)</li>
+                  <li>Zapsplat, SmartSound Loop: Stead rattling tacks of a small driving tank, medium speed. (<a class="no-style" target="_blank" href="https://www.zapsplat.com/music/loop-steady-rattling-tracks-of-a-small-driving-tank-medium-speed/">link</a>)</li>
+                  <li>Zapsplat, Mine train carriage roll and rumble along track slowly, designed 1 (<a class="no-style" target="_blank" href="https://www.zapsplat.com/music/mine-train-carriage-roll-and-rumble-along-track-slowly-designed-1/">link</a>)</li>
+                  <li>Free Music Archive, Podington Bear, Gears Spinning (<a class="no-style" target="_blank" href="https://freemusicarchive.org/music/Podington_Bear/Textural/Gears_Spinning ">link</a>)</li>
+              </ul>
+          </div>
+      </div>
+      <div class="column">
+
+      </div>
+  </div>
+
+  <script src="../js/marbleRun/marbleRun.js"></script>
+
+  <footer></footer>
+</body>
+</html>
