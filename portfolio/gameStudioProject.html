@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Studio Project</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/gameStudioProject.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+</head>
+<body>
+<!-- default style: main.css -->
+<header>
+    <nav role="navigation">
+        <ul class="menu">
+            <li>
+                <a class="hide-on-desktop">
+                    <!-- Hamburger Icon -->
+                    <svg class="menu-icon" viewBox="0 0 100 80" width="3rem" height="3rem">
+                        <rect y="0" width="100" height="20" rx="8"></rect>
+                        <rect y="30" width="100" height="20" rx="8"></rect>
+                        <rect y="60" width="100" height="20" rx="8"></rect>
+                    </svg>
+                </a>
+                <ul class="navbar">
+                    <li><a href="../portfolio/home.html">Home</a></li>
+                    <li><a href="../portfolio/gallery.html">Gallery</a></li>
+                    <li><a>Projects</a>
+                        <ul class="dropdown">
+                            <li><a href="../portfolio/gameStudioProject.html">Game Studio Project</a></li>
+                            <li><a href="../portfolio/mla.html">Machine Learning</a></li>
+                            <li><a href="../portfolio/a2raytracer.html">Ray Tracer</a></li>
+                            <li><a href="../portfolio/a2marblerun.html">Unity Marble Run</a></li>
+                            <li><a href="../portfolio/particleSystem.html">Particle Emitter</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="column" style="min-height: 3rem"></div>
+
+    <!-- The landing page image with a small amount of into on it. -->
+    <div class="row" id="gsp-header-banner">
+        <div class="bottom center column" style="min-height: 80vh;">
+            <div class="right column">
+                <div class="heading wrapper">
+                    <h1>A1 Game Studio Project</h1>
+                    <hr>
+                    <h3>An Unreal 4 Group Project</h3>
+                </div>
+            </div>
+            <div class="row no-collapse">
+                <div class="wrapper">
+                    <a href="https://github.com/Blazer60/A1GameStudioProject" class="no-style" target="_blank">
+                        <img src="../img/logos/gitHubLogo.png" alt="GitHub Logo">
+                    </a>
+                </div>
+                <div class="wrapper">
+                    <img src="../img/logos/UnrealLogo.png" alt="Unreal Logo">
+                </div>
+                <div class="wrapper">
+                    <img src="../img/logos/c++Logo.png" alt="C++ Logo">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+
+    <!-- Intro Section -->
+    <div class="row" style="min-height: 50vh">
+        <div class="bottom center column">
+            <div class="heading wrapper">
+                <h2>The Project</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>The Game Studio Project was a group project with our sister degree Game Design. Our team consisted of one programmer (me) and five game designers and we had to make a vertical slice demo for a small game.</p>
+                <p>We chose Unreal as it allowed us to convert one of the game designers into a programmer by letting him use blueprints. I would implement core features using C++, while the game designers would extend those features using blueprints. </p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+
+    <!-- Video demo-->
+    <div class="center middle row" style="min-height: max(50vh, 315px)">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yo8GI5MpdaU?si=1i7A63fsU1xYhN9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+
+
+    <!-- What game we decided to make. -->
+    <div class="row" id="gsp-game-banner">
+        <div class="bottom center column" style="min-height: 50vh">
+            <div class="heading wrapper">
+                <h2>The Game</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>Our game was a clone of Risk of Rain 2, a rouge lite third-person shooter where the more items you collect the more powerful you become. Each item in Risk of Rain 2 has different abilities that can be triggered by various events.</p>
+                <p>Our game also has this system where events are fired from the C++ code to blueprints.</p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+
+    <!-- The Cel Shader -->
+    <div class="row" style="min-height: 50vh">
+        <div class="bottom center column">
+            <div class="heading wrapper">
+                <h2>The Cel Shader</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>The Cel Shader is by far the thing I’m most proud about. This really made our game look less like an Unreal tutorial project and more like our own game.</p>
+                <p>The Cel Shader is a post-processing stack effect at the end of the pipeline. It uses a sobel operator on the normal and depth buffer to detect edges. The depth buffer is good at drawing lines between two objects while the normal buffer is useful for drawing lines where there’s a sudden change within an object. Colour banding is also used to give it a more cartoon look.</p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+    <div class="row" id="gsp-divider-banner" style="min-height: 50vh">
+
+    </div>
+
+
+    <!-- Blueprints and C++-->
+    <div class="row" style="min-height: 80vh">
+        <div class="bottom center column">
+            <div class="heading wrapper">
+                <h2>Blueprints and C++</h2>
+                <hr>
+            </div>
+            <div class="text wrapper">
+                <p>There was a steep learning curve to learning Unreal compared to Unity. However, it was worth it overall as the designers could help out using blueprints.</p>
+                <p>The core mechanics of the game are dealt with in C++, such as enemies, loot and components, but more creative things, like particles, are controlled with blueprints.</p>
+                <p>One major crossover between the two was items. Items in our game are components that can be attached to any actor and do some sort of effect based on a set of triggers. Yes, they were fairly abstract. A simple example is an item that has a chance to inflict burn for every hit scored on an enemy. The C++ code would be responsible for registering a hit and sending a signal to blueprints called ‘OnHit’. In blueprints we could then roll a dice to see if we should inflict burn and then if that was successful, play a fire effect and add the burn status effect to the enemy.</p>
+            </div>
+        </div>
+        <div class="center middle column">
+            <img src="../img/projects/gsp/BlueprintOnHit.jpg" alt="On Hit example in Unreal Blueprints" style="width: 80%; max-width: 1088px">
+        </div>
+    </div>
+
+    <div class="row" style="min-height: 5vh">
+
+    </div>
+
+<!-- default style: main.css -->
+<footer>
+    <div class="row" style="background-color: var(--secondary-colour)">
+        <div class="row" style="padding: 0 1rem">
+            <p><a class="inline" href="mailto:ryanpurse@gmail.com" target="_blank">&copy; 2023 Ryan Purse</a></p>
+        </div>
+        <div class="center right row" style="padding: 0 1rem">
+            <p><a class="inline" href="mailto:ryanpurse@gmail.com" target="_blank">Created By: Ryan Purse</a></p>
+        </div>
+    </div>
+</footer></body>
+</html>

@@ -1,0 +1,29 @@
+/**
+ * CSS for gameStudioProject.html
+ * Mainly provides background images that can be changed here with a fade.
+ * @author Ryan Purse
+ */
+
+#gsp-header-banner {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)),
+        url("../img/projects/gsp/Banner1.jpg")
+        bottom right
+        no-repeat;
+}
+
+#gsp-game-banner {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+            url("../img/projects/gsp/Banner2.jpg")
+            center
+            no-repeat;
+}
+
+#gsp-divider-banner {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
+            url("../img/projects/gsp/Banner3.jpg")
+            center
+            no-repeat;
+}
