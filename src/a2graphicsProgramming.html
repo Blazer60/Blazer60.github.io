@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Studio Project</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/graphicsProgramming.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+</head>
+<body>
+<header></header>
+
+    <!-- The landing page image with a small amount of into on it. -->
+    <div class="row" id="gcp-header-banner">
+        <div class="bottom center column" style="min-height: 80vh;">
+            <div class="right column">
+                <div class="heading wrapper">
+                    <h1>A2 Graphics Programming</h1>
+                    <hr>
+                    <h3>An OpenGL Project</h3>
+                </div>
+            </div>
+            <div class="row no-collapse">
+                <div class="wrapper">
+                    <a href="" class="no-style" target="_blank">
+                        <img src="../img/logos/gitHubLogo.png" alt="GitHub Logo">
+                    </a>
+                </div>
+                <div class="wrapper">
+                    <img src="../img/logos/c++Logo.png" alt="C++ Logo">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+
+    <!-- Intro Section -->
+    <div class="row" style="min-height: 50vh">
+        <div class="bottom center column">
+            <div class="text wrapper">
+                <p>Graphics Programming was my first real introduction to OpenGL and programming on the graphics card. I decided to make a tech demo to demonstrate my skills in OpenGL by implementing deferred rendering with HDR Bloom.</p>
+                <p>Deferred Rendering taught me how framebuffers worked as you have to render to multiple G-buffer targets. Each light then reads the G-buffers to calculate its own lighting in the world before outputting to a final buffer that is rendered to the screen.</p>
+                <p>The lighting only uses Blinn-phong’s technique as the main focus was OpenGL techniques. </p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+    <!-- The gallery for how deferred rendering works-->
+    <div class="center middle row">
+        <div class="column" style="max-width: 10vw"></div>
+        <div class="gsp-gallery">
+            <div class="gsp-gallery-item">
+                <h3>Ambient Lighting</h3>
+                <img src="../img/projects/graphicsProgramming/Ambient.jpg" alt="Ambient Image" class="gsp-image">
+            </div>
+
+            <div class="gsp-gallery-item">
+                <h3>Diffuse Lighting</h3>
+                <img src="../img/projects/graphicsProgramming/Diffuse.jpg" alt="Diffuse Image" class="gsp-image">
+            </div>
+
+            <div class="gsp-gallery-item">
+                <h3>Specular Lighting</h3>
+                <img src="../img/projects/graphicsProgramming/Specular.jpg" alt="Specular Image" class="gsp-image">
+            </div>
+
+            <div class="gsp-gallery-item">
+                <h3>Emssive Lighting</h3>
+                <img src="../img/projects/graphicsProgramming/Emissive.jpg" alt="Emissive Image" class="gsp-image">
+            </div>
+
+            <div class="gsp-gallery-item">
+                <h3>Final Output</h3>
+                <img src="../img/projects/graphicsProgramming/Final.jpg" alt="Final Image" class="gsp-image">
+            </div>
+        </div>
+        <div class="column" style="max-width: 10vw"></div>
+    </div>
+
+    <div class="row">
+        <div class="center bottom column">
+            <div class="text wrapper">
+                <p>The HDR Bloom effect that I used is the one used in Call of Duty: Advanced Warfare. This is the same one that Unity uses in its standard shader pipeline. It is made of three main steps. A prefilter, down sample passes and an up sample passes. The prefilter is responsible for capturing the areas where bloom will come from. Essentially, any pixels that have an intensity above a particular threshold.</p>
+                <p>Both the down and up sample passes are used to repeatedly blur the image while decreasing or increasing the size of the image.</p>
+                <p>Once all the passes have been completed, we can add the very blurry image back onto the original image.</p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="bottom center column">
+            <div class="text wrapper">
+                <h3>Bloom example</h3>
+                <p>The image here has a very intense light source to show the blur effect throughout every mip level.</p>
+            </div>
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="gsp-gallery">
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/01.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/02.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/03.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/04.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/05.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/06.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/07.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/08.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/09.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/10.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/11.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/12.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/13.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/14.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/15.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+            <div class="gsp-gallery-item">
+                <img src="../img/projects/graphicsProgramming/bloom/16.jpg" alt="Bloom Pass" class="gsp-image">
+            </div>
+        </div>
+    </div>
+
+<footer></footer>
+</body>
+</html>
