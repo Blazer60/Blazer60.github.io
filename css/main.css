@@ -322,6 +322,14 @@ input.number {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/projects/rayTracer/mirrorRoomLarge.png") center;
 }
 
+#gsp-project {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/projects/gsp/Banner1.jpg") center;
+}
+
+#hdr-bloom {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/projects/graphicsProgramming/Banner1.jpg") center;
+}
+
 /* Desktop media screens */
 @media only screen and (min-width: 960px) {
     /* Navigation */
