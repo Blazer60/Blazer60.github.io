@@ -12,12 +12,17 @@
 
 <!--
     todo: Try to add video for some of the other projects. Just shows the real-time nature of them.
-    todo: The mobile site doesn't look correct on some peoples phones. Find out why's that's the case.
+-->
+
+<!--
+    Note: Styles with min-height need to be nested. This makes sure that everything is visible. Not sure why this
+    happens, but it works as you'd expect if you nest it. Test in a small vertical window with a large horizontal
+    size.
 -->
 
     <!-- Landing Page banner -->
-    <div class="row" style="min-height: 80vh">
-        <div class="bottom column">
+    <div class="row">
+        <div class="bottom column" style="min-height: 80vh">
             <div class="heading wrapper" style="margin-top: 15%;">
                 <h1>Ryan Purse</h1>
                 <hr>
@@ -33,11 +38,12 @@
     </div>
 
     <!-- Projects Overview -->
-    <div class="row" style="min-height: 15vh">
-        <div class="bottom column">
+    <div class="row">
+        <div class="bottom column" style="min-height: 15vh">
             <div class="heading wrapper">
                 <h1>Projects</h1>
                 <hr>
+                <p></p>
             </div>
         </div>
         <div class="column">
@@ -46,8 +52,8 @@
     </div>
 
     <!-- HDR Bloom -->
-    <div class="row" id="hdr-bloom" style="min-height: 60vh; position: relative">
-        <div class="bottom column">
+    <div class="row" id="hdr-bloom">
+        <div class="bottom column" style="min-height: 60vh; position: relative">
             <div class="heading wrapper">
                 <h2>HDR Bloom</h2>
                 <hr>
@@ -67,8 +73,8 @@
     </div>
 
     <!-- GSP Project -->
-    <div class="row" id="gsp-project" style="min-height: 60vh; position: relative">
-        <div class="bottom column">
+    <div class="row" id="gsp-project">
+        <div class="bottom column" style="min-height: 60vh; position: relative">
             <div class="heading wrapper">
                 <h2>GSP A1 Group Project</h2>
                 <hr>
@@ -90,8 +96,8 @@
 
 
     <!-- A Level Project -->
-    <div class="row" id="a-level" style="min-height: 60vh">
-        <div class="bottom column">
+    <div class="row" id="a-level">
+        <div class="bottom column" style="min-height: 60vh">
             <div class="heading wrapper">
                 <h2>Machine Learning Algorithm</h2>
                 <hr>
@@ -109,9 +115,9 @@
     </div>
 
 
-    <!-- Particles -->
-    <div class="row" id="ray-tracer" style="min-height: 60vh">
-        <div class="bottom column">
+    <!-- Ray Tracer -->
+    <div class="row" id="ray-tracer">
+        <div class="bottom column" style="min-height: 60vh">
             <div class="heading wrapper">
                 <h2>Software Based Ray Tracer</h2>
                 <hr>
@@ -130,8 +136,8 @@
 
 
     <!-- Particles -->
-    <div class="row" id="particles" style="min-height: 60vh">
-        <div class="bottom column">
+    <div class="row" id="particles">
+        <div class="bottom column" style="min-height: 60vh">
             <div class="heading wrapper">
                 <h2>Particle Emitter</h2>
                 <hr>
