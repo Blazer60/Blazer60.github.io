@@ -1,0 +1,52 @@
+#final-year-project-header-banner {
+    background:
+            linear-gradient(0deg, var(--primary-colour), rgba(0, 0, 0, 0.0)),
+            url("../img/projects/finalYearProject/Editor2.png")
+            center
+            no-repeat;
+}
+
+#final-year-project-sponza-banner {
+    background:
+            linear-gradient(0deg, var(--primary-colour), rgba(16, 16, 16, 0.0), rgba(16, 16, 16, 0.0), rgba(16, 16, 16, 0.0), var(--primary-colour)),
+            url("../img/projects/finalYearProject/Sponza4kCurtains.png")
+            center
+            no-repeat;
+}
+
+#final-year-project-tile-classification-banner {
+    background:
+            linear-gradient(0deg, var(--primary-colour), rgba(16, 16, 16, 0.0), rgba(16, 16, 16, 0.0), rgba(16, 16, 16, 0.0), var(--primary-colour)),
+            url("../img/projects/finalYearProject/TileOverlayEditor.png")
+            center
+            no-repeat;
+}
+
+.final-year-project-brdf-img {
+    width: 500px;
+    max-width: 90%;
+    padding: 0 3rem;
+}
+
+.final-year-project-brdf-transmittance-img {
+    width: 300px;
+    max-width: 90%;
+    padding: 0 1rem;
+}
+
+.final-year-project-tile-overlay-img {
+    width: 800px;
+    max-width: 90%;
+    padding: 0 3rem;
+}
+
+.final-year-project-img-transmittance-tag {
+    margin: 0;
+    padding: 0.2rem 1rem;
+    width: 290px;
+    max-width: 90%;
+}
+
+.final-year-project-img-transmittance-tag.right {
+    text-align: right;
+}
